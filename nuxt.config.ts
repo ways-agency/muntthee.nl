@@ -8,12 +8,16 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "@nuxt/image",
     "nuxt-studio",
+    "@nuxtjs/seo",
   ],
   css: ["~/assets/css/main.css"],
   ui: {
     colorMode: false,
   },
 
+  site: {
+    indexable: false,
+  },
   studio: {
     // Studio admin route (default: '/_studio')
     route: "/_studio",

@@ -10,7 +10,6 @@ hero:
   backgroundImage:
     src: /images/muntthee-nl-hero.jpg
     alt: Muntthee.nl hero
-
 popularCategories:
   title: Populaire categorieën
   description: Ontdek de populaire categorieën van muntthee.

@@ -74,4 +74,8 @@ export const collections = {
       backgroundImage: Image,
     }),
   }),
+  content: defineCollection({
+    type: "page",
+    source: "**/*",
+  }),
 };

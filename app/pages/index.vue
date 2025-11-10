@@ -2,28 +2,6 @@
 const { data: page } = await useAsyncData("index", () =>
   queryCollection("index").first()
 );
-
-const categories = ref([
-  {
-    title: "Recepten",
-    description: "Verschillende muntthee recepten voor ieder moment en smaak.",
-    icon: "i-lucide-book-open",
-    to: "/recepten",
-  },
-  {
-    title: "Gezondheid",
-    description:
-      "Lees over de gezondheidsvoordelen en voedingswaarde van muntthee.",
-    icon: "i-lucide-heart-pulse",
-    to: "/gezondheid",
-  },
-  {
-    title: "Oorsprong",
-    description: "Ontdek de geschiedenis en oorsprong van muntthee wereldwijd.",
-    icon: "i-lucide-globe",
-    to: "/oorsprong",
-  },
-]);
 </script>
 
 <template>

@@ -2,11 +2,11 @@ hero:
   title: Muntthee.nl
   description: Muntthee.nl is de bron voor alles over muntthee. Ontdek recepten, tips, geschiedenis en het laatste nieuws over muntthee. Gezond, verfrissend en eenvoudig thuis te maken.
   links:
-    - label: "Wat is muntthee?"
-      to: "/wat-is-muntthee"
-    - label: "Recepten"
-      to: "/recepten"
-      variant: "outline"
+    - label: Wat is muntthee?
+      to: /wat-is-muntthee
+    - label: Recepten
+      to: /recepten
+      variant: outline
   backgroundImage:
     src: /images/muntthee-nl-hero.jpg
     alt: Muntthee.nl hero
@@ -17,13 +17,13 @@ popularCategories:
   cards:
     - title: Recepten
       description: Verschillende muntthee recepten voor ieder moment en smaak.
-      icon: "i-lucide-book-open"
-      to: "/recepten"
+      icon: i-lucide-book-open
+      to: /recepten
     - title: Gezondheid
       description: Lees over de gezondheidsvoordelen en voedingswaarde van muntthee.
-      icon: "i-lucide-heart-pulse"
-      to: "/gezondheid"
+      icon: i-lucide-heart-pulse
+      to: /gezondheid
     - title: Oorsprong
       description: Ontdek de geschiedenis en oorsprong van muntthee wereldwijd.
-      icon: "i-lucide-globe"
-      to: "/oorsprong"
+      icon: i-lucide-globe
+      to: /oorsprong

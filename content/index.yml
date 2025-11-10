@@ -26,3 +26,15 @@ popularCategories:
       description: Ontdek de geschiedenis en oorsprong van muntthee wereldwijd.
       icon: i-lucide-globe
       to: /oorsprong
+aboutUs:
+  title: Over ons
+  description: Muntthee.nl is een website over muntthee. We zijn gespecialiseerd in het leveren van informatie over muntthee.
+  image:
+    src: /images/muntthee-nl-over-ons.jpg
+    alt: Muntthee.nl over Ons
+  links:
+    - label: Lees meer
+      to: /over-ons
+latestArticles:
+  title: Laatste artikelen
+  description: Ontdek de laatste artikelen over muntthee.

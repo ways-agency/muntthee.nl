@@ -62,20 +62,32 @@ const Page = z.object({
   hero: PageHero,
 });
 
-export const collections = {
-  index: defineCollection({
-    type: "page",
-    source: "index.yml",
-    schema: Page.extend({
-      hero: PageHero,
-      popularCategories: PageSection.extend({
-        cards: z.array(PageCard),
+export default defineContentConfig({
+  collections: {
+    index: defineCollection({
+      type: "page",
+      source: "index.yml",
+      schema: Page.extend({
+        hero: PageHero.extend({
+          backgroundImage: Image.optional(),
+        }),
+        popularCategories: PageSection.extend({
+          cards: z.array(PageCard).optional(),
+        }),
+        aboutUs: PageSection.extend({
+          image: Image.optional(),
+          links: z.array(Button).optional(),
+        }),
+        latestArticles: PageSection,
       }),
-      backgroundImage: Image,
     }),
-  }),
-  content: defineCollection({
-    type: "page",
-    source: "**/*",
-  }),
-};
+    content: defineCollection({
+      type: "page",
+      source: "**/*",
+    }),
+    blog: defineCollection({
+      type: "page",
+      source: "blog/**",
+    }),
+  },
+});

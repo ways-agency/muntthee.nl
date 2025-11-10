@@ -8,5 +8,15 @@ export default defineAppConfig({
         base: "rounded-full",
       },
     },
+    pageHero: {
+      slots: {
+        title: "font-heading",
+      },
+    },
+    pageSection: {
+      slots: {
+        title: "font-heading",
+      },
+    },
   },
 });

@@ -107,6 +107,11 @@ export default defineContentConfig({
     articles: defineCollection({
       type: "page",
       source: "blog/*/*.md",
+      schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        featured_image: z.string().optional(),
+      }),
     }),
   },
 });

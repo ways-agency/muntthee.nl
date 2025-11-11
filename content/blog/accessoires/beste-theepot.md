@@ -1,6 +1,7 @@
 ---
 title: Beste theepot
 description: Beste theepot
+featured_image: /images/beste-theepot.jpg
 ---
 
 <p className="lead">

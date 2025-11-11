@@ -1,6 +1,7 @@
 ---
 title: Thee cadeaupakket vrouwen
 description: Thee cadeaupakket vrouwen
+featured_image: /images/beste-theepot.jpg
 ---
 
 <p className="lead">
@@ -104,7 +105,7 @@ When a heading comes after a paragraph, we need a bit more space, like I already
 
 - **It's not a bad idea to add a third item either.**
 
-  I think it probably would've been fine to just use two items but three is definitely not worse, and since I seem to be having no trouble making up arbitrary things to type, I might as well include it. I'm going to press <kbd>Enter</kbd> now.
+  I think it probably would've been fine to just use two items but three is definitely not worse, and since I seem to be having no trouble making up arbitrary things to type, I might as well include it. I'm going to press :kbd{value="Enter"} now.
 
 After this sort of list I usually have a closing statement or paragraph, because it kinda looks weird jumping right to a heading.
 

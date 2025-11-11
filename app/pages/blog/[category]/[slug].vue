@@ -14,19 +14,32 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 
 <template>
   <UContainer v-if="article">
-    <UPageHero
-      :title="article.title"
-      :description="article.description"
-      :ui="{
-        container: 'gap-6 py-10 sm:gap-y-8 sm:py-10 lg:py-10',
-      }"
-    >
-      <NuxtPicture
-        class="max-w-prose mx-auto rounded-xl overflow-hidden"
-        :src="article.featured_image"
-        :alt="article.title"
-      />
-    </UPageHero>
+    <UPage>
+      <template #left><div /></template>
+
+      <UPageHero
+        :title="article.title"
+        :description="article.description"
+        :ui="{
+          container: 'gap-6 py-10 sm:gap-y-8 sm:py-10 lg:py-10 px-0!',
+        }"
+      >
+        <NuxtPicture
+          class="rounded-xl overflow-hidden aspect-video w-full"
+          :src="article.featured_image"
+          :alt="article.title"
+          :img-attrs="{
+            class: 'size-full object-cover',
+            fetchpriority: 'high',
+            loading: 'eager',
+            width: '714',
+            height: '402',
+          }"
+        />
+      </UPageHero>
+
+      <template #right><div /></template>
+    </UPage>
 
     <UPage>
       <template v-if="article.body?.toc?.links" #left>

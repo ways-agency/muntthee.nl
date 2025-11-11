@@ -1,5 +1,5 @@
+import { defineCollection, defineContentConfig } from "@nuxt/content";
 import { z } from "zod";
-import { defineCollection } from "@nuxt/content";
 
 const Image = z.object({
   src: z.string(),
@@ -56,6 +56,11 @@ const PageSection = z.object({
   features: z.array(PageFeature).optional(),
 });
 
+const PageHeader = z.object({
+  title: z.string(),
+  description: z.string(),
+});
+
 const Page = z.object({
   title: z.string(),
   description: z.string(),
@@ -87,7 +92,21 @@ export default defineContentConfig({
     }),
     blog: defineCollection({
       type: "page",
-      source: "blog/**",
+      source: "blog/index.yml",
+      schema: z.object({
+        header: PageHeader,
+      }),
+    }),
+    categories: defineCollection({
+      type: "page",
+      source: "blog/*/*.yml",
+      schema: z.object({
+        header: PageHeader,
+      }),
+    }),
+    articles: defineCollection({
+      type: "page",
+      source: "blog/*/*.md",
     }),
   },
 });

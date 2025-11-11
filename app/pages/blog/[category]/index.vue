@@ -1,0 +1,66 @@
+<script lang="ts" setup>
+const route = useRoute();
+const { data: page } = await useAsyncData(`blog-${route.path}`, () =>
+  queryCollection("categories").path(route.path).first()
+);
+
+const { data: categories } = await useAsyncData("blog-categories", () =>
+  queryCollection("categories").all()
+);
+
+const { data: articles } = await useAsyncData(
+  `blog-${route.path}-articles`,
+  () =>
+    queryCollection("articles").where("path", "LIKE", `${route.path}%`).all()
+);
+</script>
+
+<template>
+  <UContainer>
+    <UPage>
+      <UPageHeader
+        :title="page?.header.title"
+        :description="page?.header.description"
+      >
+        <template #headline>
+          <UButton
+            to="/blog"
+            icon="i-lucide-arrow-left"
+            label="Back to blog"
+            variant="link"
+            class="p-0"
+          />
+        </template>
+        <UCarousel
+          v-slot="{ item }"
+          :items="categories"
+          class="w-full mt-6"
+          :ui="{
+            item: 'basis-auto',
+          }"
+        >
+          <UPageCard
+            :to="item.path"
+            class="m-0.5"
+            :highlight="item.path === route.path"
+            :ui="{
+              container: 'p-2 sm:p-2',
+            }"
+          >
+            {{ item.header.title }}
+          </UPageCard>
+        </UCarousel>
+      </UPageHeader>
+
+      <UPageBody>
+        <UPageGrid>
+          <ArticleCard
+            v-for="article in articles"
+            :key="article.id"
+            :article="article"
+          />
+        </UPageGrid>
+      </UPageBody>
+    </UPage>
+  </UContainer>
+</template>

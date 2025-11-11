@@ -12,10 +12,11 @@ const items = computed<NavigationMenuItem[]>(() => [
   {
     label: "Blog",
     to: "/blog",
-    active: route.path.startsWith("/blog"),
+    active: route.path === "/blog",
   },
   {
     label: "Categorieën",
+    active: route.path.startsWith("/blog/"),
     children: [
       {
         label: "Thee & Gezondheid",

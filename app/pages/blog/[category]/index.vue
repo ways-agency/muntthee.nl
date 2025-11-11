@@ -31,6 +31,7 @@ const { data: articles } = await useAsyncData(
             class="p-0"
           />
         </template>
+
         <UCarousel
           v-slot="{ item }"
           :items="categories"
@@ -39,16 +40,12 @@ const { data: articles } = await useAsyncData(
             item: 'basis-auto',
           }"
         >
-          <UPageCard
+          <UButton
+            :label="item.header.title"
             :to="item.path"
-            class="m-0.5"
-            :highlight="item.path === route.path"
-            :ui="{
-              container: 'p-2 sm:p-2',
-            }"
-          >
-            {{ item.header.title }}
-          </UPageCard>
+            :color="item.path === route.path ? 'primary' : 'neutral'"
+            :variant="item.path === route.path ? 'solid' : 'outline'"
+          />
         </UCarousel>
       </UPageHeader>
 

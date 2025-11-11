@@ -27,15 +27,12 @@ const { data: articles } = await useAsyncData("blog-articles", () =>
             item: 'basis-auto',
           }"
         >
-          <UPageCard
+          <UButton
+            :label="item.header.title"
             :to="item.path"
-            class="m-px"
-            :ui="{
-              container: 'p-2 sm:p-2',
-            }"
-          >
-            {{ item.header.title }}
-          </UPageCard>
+            color="neutral"
+            variant="outline"
+          />
         </UCarousel>
       </UPageHeader>
 

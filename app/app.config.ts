@@ -18,5 +18,10 @@ export default defineAppConfig({
         title: "font-heading",
       },
     },
+    prose: {
+      blockquote: {
+        base: "border-primary",
+      },
+    },
   },
 });

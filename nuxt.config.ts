@@ -3,12 +3,12 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   modules: [
-    "@nuxt/content",
     "@nuxt/eslint",
-    "@nuxt/ui",
     "@nuxt/image",
-    "nuxt-studio",
+    "@nuxt/ui",
+    "@nuxt/content",
     "@nuxtjs/seo",
+    "nuxt-studio",
   ],
   css: ["~/assets/css/main.css"],
   ui: {

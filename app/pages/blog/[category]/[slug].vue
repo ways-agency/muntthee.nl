@@ -1,14 +1,39 @@
 <script setup lang="ts">
+import { useDateFormatter } from "reka-ui";
+
 const route = useRoute();
+
 const { data: article } = await useAsyncData(route.path, () => {
   return queryCollection("articles")
-    .select("title", "description", "featured_image", "body")
+    .select(
+      "title",
+      "description",
+      "featured_image",
+      "body",
+      "author",
+      "published_time",
+      "modified_time"
+    )
     .path(route.path)
     .first();
 });
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
   return queryCollectionItemSurroundings("articles", route.path);
+});
+
+const { data: author } = await useAsyncData(`${route.path}-author`, () =>
+  queryCollection("authors").path(`/authors/${article?.value?.author}`).first()
+);
+
+const { locale } = useLocale();
+const formatter = useDateFormatter(locale.value.code);
+const publishedTime = formatter.custom(
+  new Date(article.value?.published_time),
+  { dateStyle: "medium" }
+);
+const modifiedTime = formatter.custom(new Date(article.value?.modified_time), {
+  dateStyle: "medium",
 });
 </script>
 
@@ -24,6 +49,18 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
           container: 'gap-6 py-10 sm:gap-y-8 sm:py-10 lg:py-10 px-0!',
         }"
       >
+        <template #footer>
+          <ul class="flex flex-wrap gap-4 items-center justify-center text-sm">
+            <li><UUser :name="author?.name" :avatar="author?.avatar" /></li>
+            <li>
+              <p>Gepubliceerd op {{ publishedTime }}</p>
+            </li>
+            <li>
+              <p>Laatst bijgewerkt op {{ modifiedTime }}</p>
+            </li>
+          </ul>
+        </template>
+
         <NuxtPicture
           class="rounded-xl overflow-hidden aspect-video w-full"
           :src="article.featured_image"
@@ -53,7 +90,7 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
         <UContentSurround v-if="surround" :surround="surround" />
       </UPageBody>
 
-      <template #right> Author etc. </template>
+      <template #right><div /></template>
     </UPage>
   </UContainer>
 </template>

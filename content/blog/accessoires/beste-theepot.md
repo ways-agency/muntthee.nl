@@ -2,6 +2,9 @@
 title: Beste theepot
 description: Beste theepot
 featured_image: /images/beste-theepot.jpg
+author: stijn
+published_time: "2025-02-25T10:11:18+00:00"
+modified_time: "2025-03-02T17:14:32+00:00"
 ---
 
 <p className="lead">

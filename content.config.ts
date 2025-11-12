@@ -8,6 +8,11 @@ const Image = z.object({
   height: z.number().optional(),
 });
 
+const Avatar = z.object({
+  src: z.string(),
+  alt: z.string().optional(),
+});
+
 const Button = z.object({
   label: z.string(),
   icon: z.string().optional(),
@@ -86,9 +91,21 @@ export default defineContentConfig({
         latestArticles: PageSection,
       }),
     }),
+    authors: defineCollection({
+      type: "page",
+      source: "authors/*.json",
+      schema: z.object({
+        name: z.string(),
+        description: z.string().optional(),
+        avatar: Avatar,
+      }),
+    }),
     content: defineCollection({
       type: "page",
-      source: "**/*",
+      source: {
+        include: "**/*",
+        exclude: ["index.yml", "authors/*.json", "blog/**/*"],
+      },
     }),
     blog: defineCollection({
       type: "page",
@@ -111,6 +128,9 @@ export default defineContentConfig({
         title: z.string(),
         description: z.string(),
         featured_image: z.string().optional(),
+        author: z.string().optional(),
+        published_time: z.string().optional(),
+        modified_time: z.string().optional(),
       }),
     }),
   },

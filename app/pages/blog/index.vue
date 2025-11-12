@@ -37,13 +37,17 @@ const { data: articles } = await useAsyncData("blog-articles", () =>
       </UPageHeader>
 
       <UPageBody>
-        <UPageGrid>
-          <ArticleCard
+        <UBlogPosts>
+          <UBlogPost
             v-for="article in articles"
             :key="article.id"
-            :article="article"
+            :title="article.title"
+            :description="article.description"
+            :to="article.path"
+            :image="article.featured_image"
+            :date="article.published_time"
           />
-        </UPageGrid>
+        </UBlogPosts>
       </UPageBody>
     </UPage>
   </UContainer>

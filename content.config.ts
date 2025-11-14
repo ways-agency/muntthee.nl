@@ -79,16 +79,27 @@ export default defineContentConfig({
       source: "index.yml",
       schema: Page.extend({
         hero: PageHero.extend({
-          backgroundImage: Image.optional(),
+          background_image: Image.optional(),
         }),
-        popularCategories: PageSection.extend({
+        popular_categories: PageSection.extend({
           cards: z.array(PageCard).optional(),
         }),
-        aboutUs: PageSection.extend({
+        about_us: PageSection.extend({
           image: Image.optional(),
           links: z.array(Button).optional(),
         }),
-        latestArticles: PageSection,
+        latest_articles: PageSection,
+      }),
+    }),
+    about_us: defineCollection({
+      type: "page",
+      source: "over-ons.yml",
+      schema: z.object({
+        about_us: z.object({
+          title: z.string(),
+          description: z.string(),
+          image: Image.optional(),
+        }),
       }),
     }),
     authors: defineCollection({
@@ -96,8 +107,8 @@ export default defineContentConfig({
       source: "authors/*.json",
       schema: z.object({
         name: z.string(),
-        description: z.string().optional(),
         avatar: Avatar,
+        bio: z.string(),
       }),
     }),
     content: defineCollection({

@@ -21,8 +21,8 @@ const { data: page } = await useAsyncData("index", () =>
     >
       <NuxtPicture
         class="absolute -z-10 inset-0 opacity-25"
-        :src="page?.hero.backgroundImage?.src"
-        :alt="page?.hero.backgroundImage?.alt"
+        :src="page?.hero.background_image?.src"
+        :alt="page?.hero.background_image?.alt"
         :img-attrs="{
           class: 'size-full object-cover',
           fetchpriority: 'high',
@@ -32,12 +32,12 @@ const { data: page } = await useAsyncData("index", () =>
     </UPageHero>
 
     <UPageSection
-      :title="page?.popularCategories.title"
-      :description="page?.popularCategories.description"
+      :title="page?.popular_categories.title"
+      :description="page?.popular_categories.description"
     >
       <UPageGrid>
         <UPageCard
-          v-for="(category, index) in page?.popularCategories.cards"
+          v-for="(category, index) in page?.popular_categories.cards"
           :key="index"
           v-bind="category"
         />
@@ -45,25 +45,25 @@ const { data: page } = await useAsyncData("index", () =>
     </UPageSection>
 
     <UPageSection
-      :title="page?.aboutUs.title"
-      :description="page?.aboutUs.description"
+      :title="page?.about_us.title"
+      :description="page?.about_us.description"
       orientation="horizontal"
-      :links="page?.aboutUs.links"
+      :links="page?.about_us.links"
     >
       <NuxtPicture
         class="rounded-lg overflow-hidden"
-        :src="page?.aboutUs.image?.src"
-        :alt="page?.aboutUs.image?.alt"
+        :src="page?.about_us.image?.src"
+        :alt="page?.about_us.image?.alt"
       />
     </UPageSection>
 
     <UPageSection
-      :title="page?.latestArticles.title"
-      :description="page?.latestArticles.description"
+      :title="page?.latest_articles.title"
+      :description="page?.latest_articles.description"
     >
       <UPageGrid>
         <UPageCard
-          v-for="(category, index) in page?.popularCategories.cards"
+          v-for="(category, index) in page?.popular_categories.cards"
           :key="index"
           v-bind="category"
         />

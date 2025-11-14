@@ -3,6 +3,18 @@ export default defineAppConfig({
     colors: {
       primary: "mint",
     },
+    navigationMenu: {
+      compoundVariants: [
+        {
+          disabled: false,
+          active: true,
+          variant: "pill",
+          class: {
+            link: ["before:bg-muted hover:before:bg-muted"],
+          },
+        },
+      ],
+    },
     button: {
       slots: {
         base: "rounded-full",
@@ -16,6 +28,7 @@ export default defineAppConfig({
     pageSection: {
       slots: {
         title: "font-heading",
+        container: "lg:py-24",
       },
     },
     prose: {

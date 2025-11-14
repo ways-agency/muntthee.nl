@@ -1,24 +1,37 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+@plugin "@tailwindcss/typography";
+
 :root {
-  --ui-primary: var(--ui-color-primary-400);
+  --ui-bg: var(--ui-color-primary-50);
+  --ui-bg-muted: var(--ui-color-primary-100);
+  --ui-bg-elevated: var(--ui-color-primary-200);
+  --ui-bg-accented: var(--ui-color-primary-300);
+  --ui-bg-inverted: var(--ui-color-primary-900);
+
+  --ui-text-dimmed: var(--ui-color-primary-500);
+  --ui-text-muted: var(--ui-color-primary-600);
+  --ui-text-toned: var(--ui-color-primary-700);
+  --ui-text: var(--ui-color-primary-800);
+  --ui-text-highlighted: var(--ui-color-primary-900);
+  --ui-text-inverted: white;
 }
 
 @theme static {
-  --color-mint-50: oklch(97.68% 0.02 166.74);
-  --color-mint-100: oklch(94.34% 0.04 163.21);
-  --color-mint-200: oklch(89% 0.07 164.61);
-  --color-mint-300: oklch(81.52% 0.1 166.47);
-  --color-mint-400: oklch(69.27% 0.12 165.06);
-  --color-mint-500: oklch(64.4% 0.13 165.01);
-  --color-mint-600: oklch(54.68% 0.11 165.98);
-  --color-mint-700: oklch(46.85% 0.09 168.27);
-  --color-mint-800: oklch(39.99% 0.07 169.22);
-  --color-mint-900: oklch(35.16% 0.06 171.62);
-  --color-mint-950: oklch(24.67% 0.04 173.17);
+  --color-mint-50: oklch(97% 0.01 145.54);
+  --color-mint-100: oklch(92.75% 0.01 141.26);
+  --color-mint-200: oklch(85.43% 0.02 145.39);
+  --color-mint-300: oklch(75.1% 0.04 145.19);
+  --color-mint-400: oklch(62.82% 0.05 145.93);
+  --color-mint-500: oklch(54.11% 0.06 146.47);
+  --color-mint-600: oklch(44.02% 0.05 146.75);
+  --color-mint-700: oklch(37.9% 0.04 147.35);
+  --color-mint-800: oklch(33.07% 0.03 148.49);
+  --color-mint-900: oklch(29.46% 0.02 149.63);
+  --color-mint-950: oklch(21.15% 0.02 148.32);
 
-  --font-heading: "Playfair Display", var(--font-sans);
+  --font-heading: "Lora", var(--font-sans);
   --font-body: "Nunito", var(--font-sans);
   --default-font-family: var(--font-body);
 }

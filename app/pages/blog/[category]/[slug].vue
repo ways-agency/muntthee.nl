@@ -23,7 +23,7 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 });
 
 const { data: author } = await useAsyncData(`${route.path}-author`, () =>
-  queryCollection("authors").path(`/authors/${article?.value?.author}`).first()
+  queryCollection("authors").first()
 );
 
 const { locale } = useLocale();

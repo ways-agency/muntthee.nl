@@ -7,10 +7,10 @@ hero:
     - label: Recepten
       to: /recepten
       variant: outline
-  backgroundImage:
+  background_image:
     src: /images/muntthee-nl-hero.jpg
     alt: Muntthee.nl hero
-popularCategories:
+popular_categories:
   title: Populaire categorieën
   description: Ontdek de populaire categorieën van muntthee.
   cards:
@@ -26,7 +26,7 @@ popularCategories:
       description: Ontdek de geschiedenis en oorsprong van muntthee wereldwijd.
       icon: i-lucide-globe
       to: /oorsprong
-aboutUs:
+about_us:
   title: Over ons
   description: Muntthee.nl is een website over muntthee. We zijn gespecialiseerd in het leveren van informatie over muntthee.
   image:
@@ -35,6 +35,6 @@ aboutUs:
   links:
     - label: Lees meer
       to: /over-ons
-latestArticles:
+latest_articles:
   title: Laatste artikelen
   description: Ontdek de laatste artikelen over muntthee.

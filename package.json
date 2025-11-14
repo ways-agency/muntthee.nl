@@ -20,5 +20,8 @@
     "nuxt-studio": "1.0.0-alpha.1",
     "vue": "^3.5.22",
     "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19"
   }
 }

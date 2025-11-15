@@ -38,57 +38,60 @@ const modifiedTime = formatter.custom(new Date(article.value?.modified_time), {
 </script>
 
 <template>
-  <UPage v-if="article">
-    <template #left><div /></template>
+  <UContainer v-if="article">
+    <UPage>
+      <template #left><div /></template>
 
-    <UPageHero
-      :title="article.title"
-      :description="article.description"
-      :ui="{
-        container: 'gap-6 py-10 sm:gap-y-8 sm:py-10 lg:py-10 px-0!',
-      }"
-    >
-      <template #footer>
-        <ul class="flex flex-wrap gap-4 items-center justify-center text-sm">
-          <li><UUser :name="author?.name" :avatar="author?.avatar" /></li>
-          <li>
-            <p>Gepubliceerd op {{ publishedTime }}</p>
-          </li>
-          <li>
-            <p>Laatst bijgewerkt op {{ modifiedTime }}</p>
-          </li>
-        </ul>
+      <UPageHero
+        :title="article.title"
+        :description="article.description"
+        :ui="{
+          container: 'gap-6 py-10 sm:gap-y-8 sm:py-10 lg:py-10 px-0!',
+        }"
+      >
+        <template #footer>
+          <ul class="flex flex-wrap gap-4 items-center justify-center text-sm">
+            <li><UUser :name="author?.name" :avatar="author?.avatar" /></li>
+            <li>
+              <p>Gepubliceerd op {{ publishedTime }}</p>
+            </li>
+            <li>
+              <p>Laatst bijgewerkt op {{ modifiedTime }}</p>
+            </li>
+          </ul>
+        </template>
+
+        <NuxtPicture
+          class="rounded-xl overflow-hidden aspect-video w-full"
+          :src="article.featured_image"
+          :alt="article.title"
+          :img-attrs="{
+            class: 'size-full object-cover',
+            fetchpriority: 'high',
+            loading: 'eager',
+            width: '714',
+            height: '402',
+          }"
+        />
+      </UPageHero>
+
+      <template #right><div /></template>
+    </UPage>
+
+    <UPage>
+      <template v-if="article.body?.toc?.links" #left>
+        <UContentToc :links="article.body.toc.links" />
       </template>
 
-      <NuxtPicture
-        class="rounded-xl overflow-hidden aspect-video w-full"
-        :src="article.featured_image"
-        :alt="article.title"
-        :img-attrs="{
-          class: 'size-full object-cover',
-          fetchpriority: 'high',
-          loading: 'eager',
-          width: '714',
-          height: '402',
-        }"
-      />
-    </UPageHero>
+      <UPageBody>
+        <ContentRenderer :value="article" />
 
-    <template #right><div /></template>
-  </UPage>
+        <USeparator />
 
-  <UPage>
-    <template v-if="article.body?.toc?.links" #left>
-      <UContentToc :links="article.body.toc.links" />
-    </template>
-    <UPageBody>
-      <ContentRenderer :value="article" />
+        <UContentSurround v-if="surround" :surround="surround" />
+      </UPageBody>
 
-      <USeparator />
-
-      <UContentSurround v-if="surround" :surround="surround" />
-    </UPageBody>
-
-    <template #right><div /></template>
-  </UPage>
+      <template #right><div /></template>
+    </UPage>
+  </UContainer>
 </template>

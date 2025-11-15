@@ -3,9 +3,9 @@ hero:
   description: Muntthee.nl is de bron voor alles over muntthee. Ontdek recepten, tips, geschiedenis en het laatste nieuws over muntthee. Gezond, verfrissend en eenvoudig thuis te maken.
   links:
     - label: Wat is muntthee?
-      to: /wat-is-muntthee
+      to: #
     - label: Recepten
-      to: /recepten
+      to: #
       variant: outline
   background_image:
     src: /images/muntthee-nl-hero.jpg

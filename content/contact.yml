@@ -1,0 +1,6 @@
+hero:
+  title: Neem contact op
+  description: Heb je vragen of wil je meer weten over Muntthee.nl? Neem contact op met ons.
+  links:
+    - label: Neem contact op
+      to: mailto:info@waysconnect.nl

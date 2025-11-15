@@ -102,22 +102,6 @@ export default defineContentConfig({
         }),
       }),
     }),
-    authors: defineCollection({
-      type: "page",
-      source: "authors/*.json",
-      schema: z.object({
-        name: z.string(),
-        avatar: Avatar,
-        bio: z.string(),
-      }),
-    }),
-    content: defineCollection({
-      type: "page",
-      source: {
-        include: "**/*",
-        exclude: ["index.yml", "authors/*.json", "blog/**/*"],
-      },
-    }),
     blog: defineCollection({
       type: "page",
       source: "blog/index.yml",
@@ -142,6 +126,22 @@ export default defineContentConfig({
         author: z.string().optional(),
         published_time: z.string().optional(),
         modified_time: z.string().optional(),
+      }),
+    }),
+    contact: defineCollection({
+      type: "page",
+      source: "contact.yml",
+      schema: z.object({
+        hero: PageSection,
+      }),
+    }),
+    authors: defineCollection({
+      type: "page",
+      source: "authors/*.json",
+      schema: z.object({
+        name: z.string(),
+        avatar: Avatar,
+        bio: z.string(),
       }),
     }),
   },

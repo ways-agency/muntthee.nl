@@ -16,7 +16,7 @@ const { data: total } = await useAsyncData(
 );
 
 const { data: articles } = await useAsyncData(
-  `blog-articles-${route.path}`,
+  `blog-articles-${route.path}-${page.value}`,
   () => {
     console.log("Fetching articles for path: ", page.value);
     return queryCollection("articles")

@@ -105,16 +105,12 @@ export default defineContentConfig({
     blog: defineCollection({
       type: "page",
       source: "blog/index.yml",
-      schema: z.object({
-        header: PageHeader,
-      }),
+      schema: PageHeader,
     }),
     categories: defineCollection({
       type: "page",
       source: "blog/*/*.yml",
-      schema: z.object({
-        header: PageHeader,
-      }),
+      schema: PageHeader,
     }),
     articles: defineCollection({
       type: "page",

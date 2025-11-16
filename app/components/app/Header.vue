@@ -1,7 +1,23 @@
 <script setup lang="ts">
+import { findPageChildren } from "@nuxt/content/utils";
 import type { NavigationMenuItem } from "@nuxt/ui";
+import { mapContentNavigation } from "@nuxt/ui/runtime/utils/content.js";
 
 const route = useRoute();
+
+const { data: categories } = await useAsyncData(
+  "header-categories",
+  () => queryCollectionNavigation("categories"),
+  {
+    transform: (data) =>
+      mapContentNavigation(findPageChildren(data, "/blog")).map((item) => ({
+        ...item,
+        active: route.path.startsWith(item.to ?? ""),
+      })),
+  }
+);
+
+console.log(categories.value);
 
 const items = computed<NavigationMenuItem[]>(() => [
   {
@@ -17,28 +33,7 @@ const items = computed<NavigationMenuItem[]>(() => [
   {
     label: "Categorieën",
     active: route.path.startsWith("/blog/"),
-    children: [
-      {
-        label: "Thee & Gezondheid",
-        to: "/blog/gezondheid",
-        active: route.path.startsWith("/blog/gezondheid"),
-      },
-      {
-        label: "Thee Accessoires",
-        to: "/blog/accessoires",
-        active: route.path.startsWith("/blog/accessoires"),
-      },
-      {
-        label: "Thee Cadeaus",
-        to: "/blog/cadeaus",
-        active: route.path.startsWith("/blog/cadeaus"),
-      },
-      {
-        label: "Zelf Muntthee Maken",
-        to: "/blog/zelf-muntthee-maken",
-        active: route.path.startsWith("/blog/zelf-muntthee-maken"),
-      },
-    ],
+    children: categories.value,
   },
   {
     label: "Over ons",

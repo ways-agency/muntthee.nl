@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const route = useRoute();
+
 const { data: page } = await useAsyncData(`blog-${route.path}`, () =>
   queryCollection("categories").path(route.path).first()
 );
@@ -7,21 +8,12 @@ const { data: page } = await useAsyncData(`blog-${route.path}`, () =>
 const { data: categories } = await useAsyncData("blog-categories", () =>
   queryCollection("categories").all()
 );
-
-const { data: articles } = await useAsyncData(
-  `blog-${route.path}-articles`,
-  () =>
-    queryCollection("articles").where("path", "LIKE", `${route.path}%`).all()
-);
 </script>
 
 <template>
   <UContainer>
     <UPage>
-      <UPageHeader
-        :title="page?.header.title"
-        :description="page?.header.description"
-      >
+      <UPageHeader :title="page?.title" :description="page?.description">
         <template #headline>
           <UButton
             to="/blog"
@@ -41,7 +33,7 @@ const { data: articles } = await useAsyncData(
           }"
         >
           <UButton
-            :label="item.header.title"
+            :label="item.title"
             :to="item.path"
             :color="item.path === route.path ? 'primary' : 'neutral'"
             :variant="item.path === route.path ? 'solid' : 'outline'"
@@ -50,16 +42,7 @@ const { data: articles } = await useAsyncData(
       </UPageHeader>
 
       <UPageBody>
-        <UBlogPosts>
-          <UBlogPost
-            v-for="article in articles"
-            :key="article.id"
-            :title="article.title"
-            :description="article.description"
-            :to="article.path"
-            :image="article.featured_image"
-          />
-        </UBlogPosts>
+        <BlogOverview />
       </UPageBody>
     </UPage>
   </UContainer>

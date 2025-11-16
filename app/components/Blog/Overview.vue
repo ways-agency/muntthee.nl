@@ -17,12 +17,14 @@ const { data: total } = await useAsyncData(
 
 const { data: articles } = await useAsyncData(
   `blog-articles-${route.path}`,
-  () =>
-    queryCollection("articles")
+  () => {
+    console.log("Fetching articles for path: ", page.value);
+    return queryCollection("articles")
       .where("path", "LIKE", `${route.path}%`)
       .limit(itemsPerPage)
       .skip(skip.value)
-      .all(),
+      .all();
+  },
   { watch: [page] }
 );
 </script>

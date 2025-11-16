@@ -9,17 +9,28 @@ const { data: categories } = await useAsyncData(
   "header-categories",
   () => queryCollectionNavigation("categories"),
   {
-    transform: (data) =>
-      mapContentNavigation(findPageChildren(data, "/blog")).map((item) => ({
-        ...item,
-        active: route.path.startsWith(item.to ?? ""),
-      })),
+    transform: (data) => {
+      const items = mapContentNavigation(findPageChildren(data, "/blog"), {
+        deep: 0,
+      })
+        .slice(0, 5)
+        .map((item) => ({
+          ...item,
+          active: route.path.startsWith(item.to ?? ""),
+        }));
+
+      items.push({
+        label: "Alle categorieën",
+        to: "/blog",
+        active: route.path === "/blog",
+      });
+
+      return items;
+    },
   }
 );
 
-console.log(categories.value);
-
-const items = computed<NavigationMenuItem[]>(() => [
+const items = computed<NavigationMenuItem[] | NavigationMenuItem[][]>(() => [
   {
     label: "Home",
     to: "/",
@@ -38,18 +49,22 @@ const items = computed<NavigationMenuItem[]>(() => [
   {
     label: "Over ons",
     to: "/over-ons",
-    active: route.path.startsWith("/over-ons"),
+    active: route.path === "/over-ons",
   },
   {
     label: "Contact",
     to: "/contact",
-    active: route.path.startsWith("/contact"),
+    active: route.path === "/contact",
   },
 ]);
 </script>
 
 <template>
   <UHeader title="Muntthee.nl">
-    <UNavigationMenu :items="items" content-orientation="vertical" />
+    <UNavigationMenu :items content-orientation="vertical" />
+
+    <template #body>
+      <UNavigationMenu :items orientation="vertical" class="-mx-2.5" />
+    </template>
   </UHeader>
 </template>

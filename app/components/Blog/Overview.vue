@@ -30,15 +30,6 @@ const { data: articles } = await useAsyncData(
 </script>
 
 <template>
-  Path: {{ route.path }}
-  <br />
-  Page: {{ page }}
-  <br />
-  Items per page: {{ itemsPerPage }}
-  <br />
-  Skip: {{ skip }}
-  <br />
-  Total: {{ total }}
   <UBlogPosts>
     <UBlogPost
       v-for="article in articles"

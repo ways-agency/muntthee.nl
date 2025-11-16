@@ -35,6 +35,20 @@ const publishedTime = formatter.custom(
 const modifiedTime = formatter.custom(new Date(article.value?.modified_time), {
   dateStyle: "medium",
 });
+
+useSchemaOrg([
+  defineArticle({
+    "@type": "BlogPosting",
+    author: {
+      name: author?.value?.name,
+      url: "/auteurs/" + author?.value?.path,
+    },
+    datePublished: publishedTime,
+    dateModified: modifiedTime,
+    headline: article?.value?.title,
+    image: article?.value?.featured_image,
+  }),
+]);
 </script>
 
 <template>

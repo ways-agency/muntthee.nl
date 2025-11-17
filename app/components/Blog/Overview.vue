@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const route = useRoute();
-const page = ref(route.query.page ? Number(route.query.page) : 1);
+const page = computed(() => Number(route.query.page || 1));
 const itemsPerPage = 2;
 const skip = computed(() => (page.value - 1) * itemsPerPage);
 

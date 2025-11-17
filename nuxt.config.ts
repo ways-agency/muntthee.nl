@@ -16,6 +16,7 @@ export default defineNuxtConfig({
   },
 
   site: {
+    url: "https://muntthee.nl/",
     indexable: false,
   },
   studio: {

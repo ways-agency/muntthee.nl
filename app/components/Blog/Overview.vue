@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const route = useRoute();
-const page = computed(() => Number(route.query.page || 1));
+const page = ref(1);
 const itemsPerPage = 2;
 const skip = computed(() => (page.value - 1) * itemsPerPage);
 
@@ -8,25 +8,27 @@ function to(page: number) {
   return { query: { page } };
 }
 
-const { data: total } = await useAsyncData(
-  `blog-articles-total-${route.path}`,
+const { data: total, refresh: refreshTotal } = await useAsyncData(
+  `blog-articles-total-${route.path}-${page.value}`,
   () =>
     queryCollection("articles").where("path", "LIKE", `${route.path}%`).all(),
   { transform: (data) => data.length }
 );
 
-const { data: articles } = await useAsyncData(
+const { data: articles, refresh } = await useAsyncData(
   `blog-articles-${route.path}-${page.value}`,
-  () => {
-    console.log("Fetching articles for path: ", page.value);
-    return queryCollection("articles")
+  () =>
+    queryCollection("articles")
       .where("path", "LIKE", `${route.path}%`)
       .limit(itemsPerPage)
       .skip(skip.value)
-      .all();
-  },
-  { watch: [page] }
+      .all()
 );
+
+watch(page, () => {
+  refreshTotal();
+  refresh();
+});
 </script>
 
 <template>

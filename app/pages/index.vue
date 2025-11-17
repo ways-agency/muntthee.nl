@@ -1,33 +1,9 @@
 <script setup lang="ts">
-import type { PageCardProps } from "@nuxt/ui";
-
 const { data: page } = await useAsyncData("index", () =>
   queryCollection("index").first()
 );
 
-const { data: categories } = await useAsyncData(
-  "categories",
-  () => queryCollection("categories").all(),
-  {
-    transform: (data) => {
-      const items: PageCardProps[] = data.slice(0, 5).map((item) => ({
-        title: item.title,
-        description: item.description,
-        icon: item.navigation?.icon,
-        to: item.path,
-      }));
-
-      items.push({
-        title: "Alle categorieën",
-        description: "Ontdek alle categorieën van muntthee.nl",
-        icon: "i-lucide-list",
-        to: "/blog",
-      });
-
-      return items;
-    },
-  }
-);
+const { categories } = useBlog();
 </script>
 
 <template>

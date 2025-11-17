@@ -10,7 +10,6 @@ const { data: article } = await useAsyncData(route.path, () => {
       "description",
       "featured_image",
       "body",
-      "author",
       "published_time",
       "modified_time"
     )
@@ -29,12 +28,13 @@ const { data: author } = await useAsyncData(`${route.path}-author`, () =>
 const { locale } = useLocale();
 const formatter = useDateFormatter(locale.value.code);
 const publishedTime = formatter.custom(
-  new Date(article.value?.published_time),
+  new Date(article.value?.published_time ?? ""),
   { dateStyle: "medium" }
 );
-const modifiedTime = formatter.custom(new Date(article.value?.modified_time), {
-  dateStyle: "medium",
-});
+const modifiedTime = formatter.custom(
+  new Date(article.value?.modified_time ?? ""),
+  { dateStyle: "medium" }
+);
 
 useSchemaOrg([
   defineArticle({

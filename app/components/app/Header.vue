@@ -1,34 +1,9 @@
 <script setup lang="ts">
-import { findPageChildren } from "@nuxt/content/utils";
 import type { NavigationMenuItem } from "@nuxt/ui";
-import { mapContentNavigation } from "@nuxt/ui/runtime/utils/content.js";
 
 const route = useRoute();
 
-const { data: categories } = await useAsyncData(
-  "header-categories",
-  () => queryCollectionNavigation("categories"),
-  {
-    transform: (data) => {
-      const items = mapContentNavigation(findPageChildren(data, "/blog"), {
-        deep: 0,
-      })
-        .slice(0, 5)
-        .map((item) => ({
-          ...item,
-          active: route.path.startsWith(item.to ?? ""),
-        }));
-
-      items.push({
-        label: "Alle categorieën",
-        to: "/blog",
-        active: route.path === "/blog",
-      });
-
-      return items;
-    },
-  }
-);
+const { categories } = useBlog();
 
 const items = computed<NavigationMenuItem[] | NavigationMenuItem[][]>(() => [
   {
@@ -37,14 +12,17 @@ const items = computed<NavigationMenuItem[] | NavigationMenuItem[][]>(() => [
     active: route.path === "/",
   },
   {
+    label: "Categorieën",
+    active: route.path.startsWith("/blog/"),
+    children: categories.value?.map((category) => ({
+      ...category,
+      label: category.title,
+    })),
+  },
+  {
     label: "Blog",
     to: "/blog",
     active: route.path === "/blog",
-  },
-  {
-    label: "Categorieën",
-    active: route.path.startsWith("/blog/"),
-    children: categories.value,
   },
   {
     label: "Over ons",
@@ -61,7 +39,7 @@ const items = computed<NavigationMenuItem[] | NavigationMenuItem[][]>(() => [
 
 <template>
   <UHeader title="Muntthee.nl">
-    <UNavigationMenu :items content-orientation="vertical" />
+    <UNavigationMenu :items />
 
     <template #body>
       <UNavigationMenu :items orientation="vertical" class="-mx-2.5" />

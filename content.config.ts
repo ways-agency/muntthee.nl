@@ -74,6 +74,9 @@ const Page = z.object({
 
 export default defineContentConfig({
   collections: {
+    /**
+     * Pages related collections
+     */
     index: defineCollection({
       type: "page",
       source: "index.yml",
@@ -81,9 +84,7 @@ export default defineContentConfig({
         hero: PageHero.extend({
           background_image: Image.optional(),
         }),
-        popular_categories: PageSection.extend({
-          cards: z.array(PageCard).optional(),
-        }),
+        popular_categories: PageSection,
         about_us: PageSection.extend({
           image: Image.optional(),
           links: z.array(Button).optional(),
@@ -104,25 +105,8 @@ export default defineContentConfig({
     }),
     blog: defineCollection({
       type: "page",
-      source: "blog/index.yml",
+      source: "blog.yml",
       schema: PageHeader,
-    }),
-    categories: defineCollection({
-      type: "page",
-      source: "blog/*/*.yml",
-      schema: PageHeader,
-    }),
-    articles: defineCollection({
-      type: "page",
-      source: "blog/*/*.md",
-      schema: z.object({
-        title: z.string(),
-        description: z.string(),
-        featured_image: z.string().optional(),
-        author: z.string().optional(),
-        published_time: z.string().optional(),
-        modified_time: z.string().optional(),
-      }),
     }),
     contact: defineCollection({
       type: "page",
@@ -131,9 +115,44 @@ export default defineContentConfig({
         hero: PageSection,
       }),
     }),
+
+    /**
+     * Blog related collections
+     */
+    articles: defineCollection({
+      type: "page",
+      source: {
+        include: "articles/*.md",
+        prefix: "/",
+      },
+      schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        icon: z.string(),
+        category: z.string(),
+        featured_image: Image.optional(),
+        published_time: z.string(),
+        modified_time: z.string(),
+      }),
+    }),
+    categories: defineCollection({
+      type: "page",
+      source: {
+        include: "categories/*.yml",
+        prefix: "/categorie",
+      },
+      schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        icon: z.string(),
+      }),
+    }),
     authors: defineCollection({
       type: "page",
-      source: "authors/*.json",
+      source: {
+        include: "authors/*.json",
+        prefix: "/auteurs",
+      },
       schema: z.object({
         name: z.string(),
         avatar: Avatar,

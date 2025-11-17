@@ -4,7 +4,7 @@ const { data: page } = await useAsyncData("over-ons", () =>
 );
 
 const { data: author } = await useAsyncData("author", () =>
-  queryCollection("authors").first()
+  queryCollection("auteurs").first()
 );
 </script>
 

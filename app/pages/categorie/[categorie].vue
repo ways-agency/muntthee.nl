@@ -1,10 +1,12 @@
 <script lang="ts" setup>
+const route = useRoute();
 const { data: page } = await useAsyncData("blog", () =>
   queryCollection("blog").first()
 );
 
-const { data: categories } = await useAsyncData("blog-categories", () =>
-  queryCollection("categories").all()
+const { categories } = useBlog();
+const items = computed(() =>
+  categories.value?.map(({ title, to }) => ({ title, to }))
 );
 </script>
 
@@ -14,7 +16,7 @@ const { data: categories } = await useAsyncData("blog-categories", () =>
       <UPageHeader :title="page?.title" :description="page?.description">
         <UCarousel
           v-slot="{ item }"
-          :items="categories"
+          :items
           class="w-full mt-6"
           :ui="{
             item: 'basis-auto',
@@ -22,9 +24,9 @@ const { data: categories } = await useAsyncData("blog-categories", () =>
         >
           <UButton
             :label="item.title"
-            :to="item.path"
-            color="neutral"
-            variant="outline"
+            :to="item.to"
+            :color="route.path === item.to ? 'primary' : 'neutral'"
+            :variant="route.path === item.to ? 'solid' : 'outline'"
           />
         </UCarousel>
       </UPageHeader>

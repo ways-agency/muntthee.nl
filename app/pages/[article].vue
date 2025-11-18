@@ -11,7 +11,7 @@ const { data: article } = await useAsyncData(route.path, () => {
       "featured_image",
       "body",
       "published_time",
-      "modified_time"
+      "modified_time",
     )
     .path(route.path)
     .first();
@@ -22,18 +22,18 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 });
 
 const { data: author } = await useAsyncData(`${route.path}-author`, () =>
-  queryCollection("authors").first()
+  queryCollection("authors").first(),
 );
 
 const { locale } = useLocale();
 const formatter = useDateFormatter(locale.value.code);
 const publishedTime = formatter.custom(
   new Date(article.value?.published_time ?? ""),
-  { dateStyle: "medium" }
+  { dateStyle: "medium" },
 );
 const modifiedTime = formatter.custom(
   new Date(article.value?.modified_time ?? ""),
-  { dateStyle: "medium" }
+  { dateStyle: "medium" },
 );
 
 useSchemaOrg([
@@ -52,19 +52,22 @@ useSchemaOrg([
 </script>
 
 <template>
-  <UContainer v-if="article">
+  <article>
     <UPageHero
       :title="article.title"
       :description="article.description"
       :ui="{
-        container: 'gap-6 py-10 sm:gap-y-8 sm:py-10 lg:py-10',
+        container:
+          'gap-6 py-12 sm:gap-y-8 sm:py-14 lg:py-18 relative @container',
         wrapper: 'text-left',
-        title: 'text-inverted lg:text-5xl',
+        title: 'text-inverted sm:text-5xl lg:text-5xl',
         description: 'max-w-prose text-primary-100',
       }"
     >
       <template #footer>
-        <ul class="flex flex-wrap gap-4 items-center text-sm text-primary-100">
+        <ul
+          class="text-primary-100 flex flex-col flex-wrap gap-4 text-sm sm:flex-row sm:items-center"
+        >
           <li>
             <UUser
               :name="author?.name"
@@ -84,11 +87,11 @@ useSchemaOrg([
       </template>
 
       <NuxtPicture
-        class="rounded-b-xl overflow-hidden aspect-video size-full absolute inset-0 -z-10 bg-black"
+        class="container:rounded-b-xl absolute inset-0 -z-10 aspect-video size-full overflow-hidden bg-black"
         :src="article.featured_image"
         :alt="article.title"
         :img-attrs="{
-          class: 'size-full object-cover opacity-40',
+          class: 'size-full object-cover opacity-40 []',
           fetchpriority: 'high',
           loading: 'eager',
           width: '714',
@@ -97,24 +100,26 @@ useSchemaOrg([
       />
     </UPageHero>
 
-    <UPage>
-      <template v-if="article.body?.toc?.links" #left>
-        <UContentToc
-          :links="article.body.toc.links"
-          title="In dit artikel"
-          highlight
-        />
-      </template>
+    <UContainer>
+      <UPage>
+        <template v-if="article.body?.toc?.links" #left>
+          <UContentToc
+            :links="article.body.toc.links"
+            title="In dit artikel"
+            highlight
+          />
+        </template>
 
-      <UPageBody>
-        <ContentRenderer :value="article" />
+        <UPageBody>
+          <ContentRenderer :value="article" />
 
-        <USeparator />
+          <USeparator />
 
-        <UContentSurround v-if="surround" :surround="surround" />
-      </UPageBody>
+          <UContentSurround v-if="surround" :surround="surround" />
+        </UPageBody>
 
-      <template #right><div /></template>
-    </UPage>
-  </UContainer>
+        <template #right><div /></template>
+      </UPage>
+    </UContainer>
+  </article>
 </template>

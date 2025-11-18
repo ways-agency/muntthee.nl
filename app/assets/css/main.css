@@ -33,4 +33,6 @@
   --font-heading: "Lora", var(--font-sans);
   --font-body: "Nunito", var(--font-sans);
   --default-font-family: var(--font-body);
+
+  --breakpoint-container: 80rem;
 }

@@ -50,7 +50,7 @@ watch(page, () => {
 </script>
 
 <template>
-  <UBlogPosts>
+  <UBlogPosts v-if="articles && articles.length > 0">
     <UBlogPost
       v-for="article in articles"
       :key="article.id"
@@ -59,10 +59,14 @@ watch(page, () => {
       :to="article.path"
       :image="article.featured_image"
       :date="article.published_time"
+      :badge="article.category"
     />
   </UBlogPosts>
 
+  <p v-else>Geen artikelen gevonden</p>
+
   <UPagination
+    v-if="articles && articles.length > 0"
     v-model:page="page"
     :total
     :items-per-page

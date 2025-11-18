@@ -17,7 +17,7 @@ const { categories } = useBlog();
       :ui="{
         wrapper: 'text-left',
         title: 'text-inverted',
-        description: 'text-dimmed max-w-prose',
+        description: 'max-w-prose text-primary-200',
         links: 'justify-start',
       }"
     >

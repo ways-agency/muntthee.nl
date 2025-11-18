@@ -3,18 +3,6 @@ export default defineAppConfig({
     colors: {
       primary: "mint",
     },
-    navigationMenu: {
-      compoundVariants: [
-        {
-          disabled: false,
-          active: true,
-          variant: "pill",
-          class: {
-            link: ["before:bg-muted hover:before:bg-muted"],
-          },
-        },
-      ],
-    },
     button: {
       slots: {
         base: "rounded-full",
@@ -34,6 +22,18 @@ export default defineAppConfig({
     prose: {
       blockquote: {
         base: "border-primary",
+      },
+    },
+    contentToc: {
+      slots: {
+        link: "font-bold",
+      },
+      variants: {
+        active: {
+          false: {
+            link: "font-normal",
+          },
+        },
       },
     },
   },

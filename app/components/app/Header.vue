@@ -13,7 +13,7 @@ const items = computed<NavigationMenuItem[] | NavigationMenuItem[][]>(() => [
   },
   {
     label: "Categorieën",
-    active: route.path.startsWith("/blog/"),
+    active: route.path.startsWith("/categorie/"),
     children: categories.value?.map((category) => ({
       ...category,
       label: category.title,
@@ -39,7 +39,7 @@ const items = computed<NavigationMenuItem[] | NavigationMenuItem[][]>(() => [
 
 <template>
   <UHeader title="Muntthee.nl">
-    <UNavigationMenu :items />
+    <UNavigationMenu :items content-orientation="vertical" />
 
     <template #body>
       <UNavigationMenu :items orientation="vertical" class="-mx-2.5" />

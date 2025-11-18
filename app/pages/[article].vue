@@ -61,6 +61,7 @@ useSchemaOrg([
         :description="article.description"
         :ui="{
           container: 'gap-6 py-10 sm:gap-y-8 sm:py-10 lg:py-10 px-0!',
+          title: '',
         }"
       >
         <template #footer>
@@ -94,7 +95,11 @@ useSchemaOrg([
 
     <UPage>
       <template v-if="article.body?.toc?.links" #left>
-        <UContentToc :links="article.body.toc.links" />
+        <UContentToc
+          :links="article.body.toc.links"
+          title="In dit artikel"
+          highlight
+        />
       </template>
 
       <UPageBody>

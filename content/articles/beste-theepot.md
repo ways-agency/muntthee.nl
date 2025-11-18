@@ -1,6 +1,6 @@
 ---
 title: Beste theepot
-description: Beste theepot
+description: "Ontdek de beste theepotten van 2025: tips & topkeuzes voor echte theeliefhebbers"
 category: Praktisch
 featured_image: /images/beste-theepot.jpg
 published_time: "2025-02-25T10:11:18+00:00"

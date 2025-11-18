@@ -1,6 +1,6 @@
 ---
 title: Thee cadeaupakket vrouwen
-description: Thee cadeaupakket vrouwen
+description: "Ontdek het perfecte thee cadeaupakket voor vrouwen: een smaakvolle en ontspannende verrassing vol heerlijke theeën en stijlvolle accessoires."
 category: Praktisch
 featured_image: /images/beste-theepot.jpg
 published_time: "2025-02-25T10:11:18+00:00"
@@ -23,23 +23,6 @@ We hear you, but we're not convinced that simply disabling our base styles is wh
 The `@tailwindcss/typography` plugin is our attempt to give you what you _actually_ want, without any of the downsides of doing something stupid like disabling our base styles.
 
 It adds a new `prose` class that you can slap on any block of vanilla HTML content and turn it into a beautiful, well-formatted document:
-
-```html
-<article class="prose">
-  <h1>Garlic bread with cheese: What the science tells us</h1>
-  <p>
-    For years parents have espoused the health benefits of eating garlic bread
-    with cheese to their children, with the food earning such an iconic status
-    in our culture that kids will often dress up as warm, cheesy loaf for
-    Halloween.
-  </p>
-  <p>
-    But a recent study shows that the celebrated appetizer may be linked to a
-    series of rabies cases springing up around the country.
-  </p>
-  <!-- ... -->
-</article>
-```
 
 For more information about how to use the plugin and the features it includes, [read the documentation](https://github.com/tailwindcss/typography/blob/main/README.md).
 

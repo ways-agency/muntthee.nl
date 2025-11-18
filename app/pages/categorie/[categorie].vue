@@ -1,19 +1,38 @@
 <script lang="ts" setup>
-const route = useRoute();
-const { data: page } = await useAsyncData("blog", () =>
-  queryCollection("blog").first()
+import { upperFirst } from "es-toolkit/string";
+
+const { path, params } = useRoute();
+
+const { data: page } = await useAsyncData(
+  `categorie--${params.categorie}`,
+  () => queryCollection("categories").path(path).first()
+);
+
+const { data: total } = await useAsyncData(
+  `categorie--${params.categorie}--total`,
+  () =>
+    queryCollection("articles")
+      .where("category", "=", upperFirst(params.categorie as string))
+      .count()
 );
 
 const { categories } = useBlog();
 const items = computed(() =>
-  categories.value?.map(({ title, to }) => ({ title, to }))
+  categories.value?.map(({ title, to, count }) => ({ title, to, count }))
 );
+
+useRobotsRule(total.value && total.value > 0 ? true : false);
 </script>
 
 <template>
   <UContainer>
     <UPage>
-      <UPageHeader :title="page?.title" :description="page?.description">
+      <UPageHeader :description="page?.description">
+        <template #title>
+          {{ page?.title }}
+          <small class="text-primary-300 text-base">({{ total }})</small>
+        </template>
+
         <UCarousel
           v-slot="{ item }"
           :items
@@ -23,11 +42,15 @@ const items = computed(() =>
           }"
         >
           <UButton
-            :label="item.title"
             :to="item.to"
-            :color="route.path === item.to ? 'primary' : 'neutral'"
-            :variant="route.path === item.to ? 'solid' : 'outline'"
-          />
+            :color="path === item.to ? 'primary' : 'neutral'"
+            :variant="path === item.to ? 'solid' : 'outline'"
+          >
+            {{ item.title }}
+            <small :class="path === item.to ? 'text-primary-100' : 'text-muted'"
+              >({{ item.count }})</small
+            >
+          </UButton>
         </UCarousel>
       </UPageHeader>
 

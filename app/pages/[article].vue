@@ -53,45 +53,49 @@ useSchemaOrg([
 
 <template>
   <UContainer v-if="article">
-    <UPage>
-      <template #left><div /></template>
+    <UPageHero
+      :title="article.title"
+      :description="article.description"
+      :ui="{
+        container: 'gap-6 py-10 sm:gap-y-8 sm:py-10 lg:py-10',
+        wrapper: 'text-left',
+        title: 'text-inverted lg:text-5xl',
+        description: 'max-w-prose text-primary-100',
+      }"
+    >
+      <template #footer>
+        <ul class="flex flex-wrap gap-4 items-center text-sm text-primary-100">
+          <li>
+            <UUser
+              :name="author?.name"
+              :avatar="author?.avatar"
+              :ui="{
+                name: 'text-primary-100',
+              }"
+            />
+          </li>
+          <li>
+            <p>Gepubliceerd op {{ publishedTime }}</p>
+          </li>
+          <li>
+            <p>Laatst bijgewerkt op {{ modifiedTime }}</p>
+          </li>
+        </ul>
+      </template>
 
-      <UPageHero
-        :title="article.title"
-        :description="article.description"
-        :ui="{
-          container: 'gap-6 py-10 sm:gap-y-8 sm:py-10 lg:py-10 px-0!',
-          title: '',
+      <NuxtPicture
+        class="rounded-b-xl overflow-hidden aspect-video size-full absolute inset-0 -z-10 bg-black"
+        :src="article.featured_image"
+        :alt="article.title"
+        :img-attrs="{
+          class: 'size-full object-cover opacity-40',
+          fetchpriority: 'high',
+          loading: 'eager',
+          width: '714',
+          height: '402',
         }"
-      >
-        <template #footer>
-          <ul class="flex flex-wrap gap-4 items-center justify-center text-sm">
-            <li><UUser :name="author?.name" :avatar="author?.avatar" /></li>
-            <li>
-              <p>Gepubliceerd op {{ publishedTime }}</p>
-            </li>
-            <li>
-              <p>Laatst bijgewerkt op {{ modifiedTime }}</p>
-            </li>
-          </ul>
-        </template>
-
-        <NuxtPicture
-          class="rounded-xl overflow-hidden aspect-video w-full"
-          :src="article.featured_image"
-          :alt="article.title"
-          :img-attrs="{
-            class: 'size-full object-cover',
-            fetchpriority: 'high',
-            loading: 'eager',
-            width: '714',
-            height: '402',
-          }"
-        />
-      </UPageHero>
-
-      <template #right><div /></template>
-    </UPage>
+      />
+    </UPageHero>
 
     <UPage>
       <template v-if="article.body?.toc?.links" #left>

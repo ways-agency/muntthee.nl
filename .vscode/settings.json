@@ -15,5 +15,6 @@
   "tailwindCSS.experimental.classRegex": [
     ["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
-  "nuxtr.monorepoMode.DirectoryName": "app"
+  "nuxtr.monorepoMode.DirectoryName": "app",
+  "cSpell.words": ["categorie"]
 }

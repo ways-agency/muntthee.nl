@@ -171,12 +171,10 @@ Zie ook: Iced tea gids en Gemberthee (how-to).
 
 ## FAQ
 
-## ::accordion
-
+::accordion
+---
 defaultValue:
-
-- '0'
-
+  - '0'
 ---
 
 ::accordion-item{label="Hoeveel gember en munt per kop thee? "}

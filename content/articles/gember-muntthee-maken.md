@@ -1,5 +1,5 @@
 ---
-title: Gembermuntthee maken
+title: Gember muntthee maken
 description: Hoe maak je gembermuntthee?
 icon: i-lucide-leaf
 category: Recepten
@@ -38,46 +38,6 @@ Tip: Zie ook onze gids Waterkwaliteit voor thee voor mineraliteit en pH.
 - Proef vanaf 5 minuten; stop eerder voor zachter, later voor pittiger.
 - Optioneel: schijfje citroen of 1-2 tl honing toevoegen zodra de drank <40°C is.
 - Notities/variaties: voeg 2 peulen kardemom of 1/2 kaneelstokje toe voor een winterse toets.
-
-Fotoplan + alt-teksten:
-
-- Foto 1: gember dun snijden — alt: “thee munt gember - gember snijden”
-- Foto 2: munt kneuzen — alt: “munt kneuzen voor munt gember thee”
-- Foto 3: trekken op 95°C — alt: “gember muntthee trekken 95°C”
-- Foto 4: serveren — alt: “thee met gember en munt serveren”
-
-Recipe schema (JSON-LD):
-
-```json
-{
-  \"@context\": \"https://schema.org\",
-  \"@type\": \"Recipe\",
-  \"name\": \"Gember muntthee (thee met gember en munt)\",
-  \"description\": \"Frisse, kruidige munt gember thee met heldere aroma’s. Warm of als basis voor iced tea.\",
-  \"recipeYield\": \"1 portie\",
-  \"totalTime\": \"PT10M\",
-  \"prepTime\": \"PT5M\",
-  \"cookTime\": \"PT5M\",
-  \"recipeIngredient\": [
-    \"250 ml water (90-95°C, bij voorkeur gefilterd)\",
-    \"10-15 g verse gember, dun gesneden\",
-    \"10-15 g verse munt (Mentha spicata), licht gekneusd\",
-    \"Optioneel: 1-2 tl honing, 1-2 schijfjes citroen\"
-  ],
-  \"recipeInstructions\": [
-    {\"@type\":\"HowToStep\",\"text\":\"Kop/pot voorverwarmen. Gember in het glas/pot.\"},
-    {\"@type\":\"HowToStep\",\"text\":\"Overgiet gember met 250 ml water van 90-95°C.\"},
-    {\"@type\":\"HowToStep\",\"text\":\"Na 1-2 min de gekneusde munt toevoegen.\"},
-    {\"@type\":\"HowToStep\",\"text\":\"Trek in totaal 5-8 min; proef vanaf 5 min.\"},
-    {\"@type\":\"HowToStep\",\"text\":\"Voeg optioneel honing/citroen toe onder 40°C en serveer.\"}
-  ],
-  \"temperature\": \"90-95°C\",
-  \"suitableForDiet\": \"https://schema.org/LowSugarDiet\",
-  \"image\": \"https://example.com/images/gember-muntthee.jpg\",
-  \"author\": {\"@type\":\"Person\",\"name\":\"Redactie Voeding & Kruiden\"},
-  \"mainEntityOfPage\": \"https://example.com/thee-munt-gember\"
-}
-```
 
 Zie ook: Gemberthee (how-to) en Muntthee (basis).
 

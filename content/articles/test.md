@@ -1,11 +1,11 @@
 ---
-title: Waar Is Muntthee Goed Voor? 7 Bewezen Gezondheidsvoordelen
-description: Ontdek de krachtige werking van muntthee op spijsvertering, stress en verkoudheid. Plus bijwerkingen en het verschil tussen pepermunt en groene munt.
-meta.title: Waar Is Muntthee Goed Voor? 7 Bewezen Gezondheidsvoordelen | Gids 2025
-meta.description: Leer waar muntthee goed voor is: van spijsverteringsklachten tot stress. Ontdek 7 bewezen voordelen, bijwerkingen en het verschil tussen pepermunt en groene munt.
-category: explainers
-published_time: 2025-12-05T22:22:57.694+01:00
-modified_time: 2025-12-05T22:22:57.694+01:00
+title: Waar is muntthee goed voor? 7 bewezen gezondheidsvoordelen + bijwerkingen
+description: Ontdek waar muntthee goed voor is en wat verse munt doet met je lichaam. Van spijsvertering tot stress - alle voordelen uitgelegd.
+meta.title: Waar is muntthee goed voor? 7 bewezen gezondheidsvoordelen + bijwerkingen | Gids 2025
+meta.description: Waar is muntthee goed voor? Lees over 7 bewezen voordelen van verse muntthee voor spijsvertering, stress en verkoudheid. Plus bijwerkingen en tips.
+category: guides
+published_time: "2025-12-05T22:24:14.751+01:00"
+modified_time: "2025-12-05T22:24:14.751+01:00"
 ---
 
 ## Introductie

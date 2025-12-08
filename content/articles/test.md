@@ -32,6 +32,8 @@ Hier zijn de zeven belangrijkste **muntthee voordelen** in één overzicht:
 
 Deze lijst geeft direct antwoord op **waarvoor is muntthee goed**, maar elk voordeel verdient een diepere uitleg. Hieronder werken we deze **gezondheidseffecten muntthee** wetenschappelijk uit.
 
+:bol-card{title="Groene Thee Biologisch Marrakesh Munt 200 gr - Biologische Losse Thee - Biologische Munt Thee - Munt Thee Biologisch" image="https://media.s-bol.com/NKw6ylD0yZKv/9A3o8D/550x350.jpg" to="https://partner.bol.com/click/click?p=2&t=url&s=1489097&f=TXL&url=https://www.bol.com/nl/nl/p/groene-thee-marrakesh-munt-200-gr/9300000132207525/&name=Groene%20Thee%20Biologisch%20Marrakesh%20Munt%20200%20gr%20-%20Biologische%20Losse%20Thee%20-%20Biologische%20Munt%20Thee%20-%20Munt%20Thee%20Biologisch"}
+
 ## De 7 bewezen voordelen van muntthee voor je gezondheid
 
 ### Spijsvertering en maagklachten

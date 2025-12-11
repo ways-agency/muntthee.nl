@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 defineProps<{
   title: string;
+  description: string;
+  price: number;
+  strikeThroughPrice: number;
+  rating: number;
   image: string;
   to: string;
 }>();
@@ -18,20 +22,22 @@ defineProps<{
       :ui="{
         container: 'lg:grid-cols-3',
         wrapper: 'lg:col-span-2',
-        description: 'text-[#e91607] font-bold text-lg',
       }"
     >
       <NuxtPicture
         :src="image"
         :alt="title"
         :img-attrs="{
-          width: '550',
-          height: '350',
+          width: '250',
+          height: '200',
           class: 'rounded-lg p-4 bg-white',
         }"
       />
 
-      <template #description>20,<small>69</small></template>
+      <template #description>
+        <span class="text-lg font-bold text-[#e91607]">{{ price }}</span
+        >, <s>{{ strikeThroughPrice }}</s>
+      </template>
 
       <template #footer>
         <UButton label="Koop op bol.com" class="bg-[#0000a4]" />

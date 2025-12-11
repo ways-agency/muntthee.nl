@@ -1,5 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    bolClientId: process.env.BOL_CLIENT_ID,
+    bolClientSecret: process.env.BOL_CLIENT_SECRET,
+  },
+
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   modules: [

@@ -1,8 +1,10 @@
+import type { BolProduct } from "../../../app/components/types/bol";
+
 export default defineEventHandler(async (event) => {
   const accessToken = await getBolAccessToken();
   const ean = getRouterParam(event, "ean");
 
-  const product = await $fetch(
+  const product = await $fetch<BolProduct>(
     `https://api.bol.com/marketing/catalog/v1/products/${ean}`,
     {
       headers: {

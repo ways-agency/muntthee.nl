@@ -19,7 +19,6 @@ export default defineNuxtConfig({
   ui: {
     colorMode: false,
   },
-
   site: {
     url: "https://muntthee.nl/",
     indexable: false,

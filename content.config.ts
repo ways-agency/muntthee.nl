@@ -155,6 +155,7 @@ export default defineContentConfig({
       },
       schema: z.object({
         name: z.string(),
+        description: z.string(),
         avatar: Avatar,
         bio: z.string(),
       }),

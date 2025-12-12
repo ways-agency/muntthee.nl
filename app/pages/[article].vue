@@ -28,11 +28,11 @@ const { data: author } = await useAsyncData(`${route.path}-author`, () =>
 const { locale } = useLocale();
 const formatter = useDateFormatter(locale.value.code);
 const publishedTime = formatter.custom(
-  new Date(article.value?.published_time ?? ""),
+  new Date(article?.value?.published_time ?? ""),
   { dateStyle: "medium" },
 );
 const modifiedTime = formatter.custom(
-  new Date(article.value?.modified_time ?? ""),
+  new Date(article?.value?.modified_time ?? ""),
   { dateStyle: "medium" },
 );
 
@@ -54,8 +54,8 @@ useSchemaOrg([
 <template>
   <article>
     <UPageHero
-      :title="article.title"
-      :description="article.description"
+      :title="article?.title"
+      :description="article?.description"
       :ui="{
         container:
           'gap-6 py-12 sm:gap-y-8 sm:py-14 lg:py-18 relative @container',
@@ -69,15 +69,6 @@ useSchemaOrg([
           class="text-primary-100 flex flex-col flex-wrap gap-4 text-sm sm:flex-row sm:items-center"
         >
           <li>
-            <UUser
-              :name="author?.name"
-              :avatar="author?.avatar"
-              :ui="{
-                name: 'text-primary-100',
-              }"
-            />
-          </li>
-          <li>
             <p>Gepubliceerd op {{ publishedTime }}</p>
           </li>
           <li>
@@ -88,8 +79,8 @@ useSchemaOrg([
 
       <NuxtPicture
         class="container:rounded-b-xl absolute inset-0 -z-10 aspect-video size-full overflow-hidden bg-black"
-        :src="article.featured_image"
-        :alt="article.title"
+        :src="article?.featured_image"
+        :alt="article?.title"
         :img-attrs="{
           class: 'size-full object-cover opacity-40 []',
           fetchpriority: 'high',
@@ -102,14 +93,13 @@ useSchemaOrg([
 
     <UContainer>
       <UPage>
-        <template v-if="article.body?.toc?.links" #left>
+        <template v-if="article?.body?.toc?.links" #left>
           <UContentToc
             :links="article.body.toc.links"
             title="In dit artikel"
             highlight
           />
         </template>
-
         <UPageBody>
           <ContentRenderer :value="article" />
 
@@ -118,7 +108,20 @@ useSchemaOrg([
           <UContentSurround v-if="surround" :surround="surround" />
         </UPageBody>
 
-        <template #right><div /></template>
+        <template #right>
+          <UPageAside class="lg:pe-0">
+            <div class="space-y-2">
+              <p class="text-sm font-bold">Geschreven door</p>
+
+              <AuthorCard
+                v-if="author"
+                :name="author.name"
+                :description="author.description"
+                :avatar="author.avatar"
+              />
+            </div>
+          </UPageAside>
+        </template>
       </UPage>
     </UContainer>
   </article>

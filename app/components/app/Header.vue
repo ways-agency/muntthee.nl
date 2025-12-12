@@ -34,6 +34,11 @@ const items = computed<NavigationMenuItem[] | NavigationMenuItem[][]>(() => [
     to: "/contact",
     active: route.path === "/contact",
   },
+  {
+    label: "Test",
+    to: "/testt",
+    active: route.path === "/testt",
+  },
 ]);
 </script>
 

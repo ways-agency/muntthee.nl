@@ -61,8 +61,8 @@ const strikeThroughPrice = computed(() => {
         }"
       />
 
-      <div class="flex flex-row items-center gap-4">
-        <div class="space-y-2">
+      <div class="flex flex-1 flex-row items-center gap-4">
+        <div class="flex-1 space-y-2">
           <h3 class="text-lg font-bold">
             <USkeleton v-if="pending">
               <span class="invisible">

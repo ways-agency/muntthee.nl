@@ -10,20 +10,21 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/content": "3.8.0",
+    "@nuxt/content": "3.9.0",
     "@nuxt/eslint": "1.10.0",
     "@nuxt/image": "2.0.0",
-    "@nuxt/ui": "4.1.0",
-    "@nuxtjs/seo": "^3.2.2",
-    "better-sqlite3": "^12.4.1",
-    "es-toolkit": "^1.42.0",
-    "nuxt": "^4.2.1",
-    "nuxt-studio": "1.0.0-alpha.1",
-    "vue": "^3.5.22",
-    "vue-router": "^4.6.3"
+    "@nuxt/ui": "4.2.1",
+    "@nuxtjs/seo": "^3.3.0",
+    "better-sqlite3": "^12.5.0",
+    "es-toolkit": "^1.43.0",
+    "eslint@latest": "link:nuxt/eslint@latest",
+    "nuxt": "^4.2.2",
+    "nuxt-studio": "1.0.0-beta.0",
+    "vue": "^3.5.25",
+    "vue-router": "^4.6.4"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
-    "prettier-plugin-tailwindcss": "^0.7.1"
+    "prettier-plugin-tailwindcss": "^0.7.2"
   }
 }

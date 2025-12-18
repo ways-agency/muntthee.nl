@@ -57,13 +57,15 @@ const strikeThroughPrice = computed(() => {
         :img-attrs="{
           width: product?.image?.width,
           height: product?.image?.height,
-          class: 'max-w-[100px] rounded-lg bg-white p-2',
+          class: 'max-w-[100px] max-h-[100px] rounded-lg bg-white p-2',
         }"
       />
 
-      <div class="flex flex-1 flex-row items-center gap-4">
+      <div
+        class="flex flex-1 flex-col items-start gap-4 sm:flex-row sm:items-center"
+      >
         <div class="flex-1 space-y-2">
-          <h3 class="text-lg font-bold">
+          <h3 class="line-clamp-2 text-lg font-bold">
             <USkeleton v-if="pending">
               <span class="invisible">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -81,7 +83,10 @@ const strikeThroughPrice = computed(() => {
             {{ product?.offer?.deliveryDescription }}
           </p>
 
-          <div class="flex items-center gap-2">
+          <div
+            v-if="product?.rating && product?.rating > 3"
+            class="flex items-center gap-2"
+          >
             <div class="pointer-events-none relative">
               <div class="flex flex-row">
                 <UIcon
@@ -112,24 +117,20 @@ const strikeThroughPrice = computed(() => {
           </div>
         </div>
 
-        <div class="flex flex-col items-center gap-2">
-          <div class="flex flex-wrap items-center justify-center gap-x-2">
-            <s>
-              <USkeleton v-if="pending"
-                ><span class="invisible">€ 0,00</span></USkeleton
-              >
+        <div class="flex flex-col gap-2 sm:items-center">
+          <div class="flex flex-wrap items-center gap-x-2 sm:justify-center">
+            <s v-if="strikeThroughPrice">
               {{ strikeThroughPrice }}
             </s>
             <span class="text-lg font-bold text-[#e91607]">
-              <USkeleton v-if="pending"
-                ><span class="invisible">€ 0,00</span></USkeleton
-              >
+              <USkeleton v-if="pending">
+                <span class="invisible">€ 0,00</span>
+              </USkeleton>
               {{ price }}
             </span>
           </div>
 
-          <UBadge label="Controleer prijs" class="bg-[#0000a4]" size="lg" />
-          <span>Bol</span>
+          <UBadge label="Koop bij bol" size="lg" />
         </div>
       </div>
     </div>

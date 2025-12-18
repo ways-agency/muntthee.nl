@@ -100,16 +100,12 @@ useSchemaOrg([
 
         <template #right>
           <UPageAside class="lg:pe-0">
-            <div class="space-y-2">
-              <p class="text-sm font-bold">Geschreven door</p>
-
-              <AuthorCard
-                v-if="author"
-                :name="author.name"
-                :description="author.description"
-                :avatar="author.avatar"
-              />
-            </div>
+            <AuthorCard
+              v-if="author"
+              :name="author.name"
+              :description="author.description"
+              :avatar="author.avatar"
+            />
           </UPageAside>
         </template>
       </UPage>

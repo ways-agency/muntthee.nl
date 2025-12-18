@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { BolProduct } from "../types/bol";
+import type { BolProduct } from "@/types/bol";
 
 const props = defineProps<{
   ean: string;

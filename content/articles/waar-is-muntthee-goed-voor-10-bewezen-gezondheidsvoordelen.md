@@ -1,6 +1,6 @@
 ---
 title: Waar Is Muntthee Goed Voor? 10 Bewezen Gezondheidsvoordelen
-description: Ontdek waar muntthee goed voor is: van spijsvertering tot stress. Plus recepten en veiligheidstips.
+description: "Ontdek waar muntthee goed voor is: van spijsvertering tot stress. Plus recepten en veiligheidstips."
 meta.title: Waar Is Muntthee Goed Voor? 10 Bewezen Gezondheidsvoordelen | Gids 2025
 meta.description: Muntthee helpt bij spijsvertering, hoofdpijn, verkoudheid en stress. Ontdek alle voordelen, recepten en wanneer je voorzichtig moet zijn.
 category: guides
@@ -86,13 +86,13 @@ De antibacteriële eigenschappen van munt pakken de oorzaak van slechte adem aan
 
 ## Wat zit er in muntthee? Voedingswaarden en wetenschap
 
-Om volledig te begrijpen waar is verse muntthee goed voor, is het belangrijk te weten welke actieve stoffen verantwoordelijk zijn voor de werking. De samenstelling van de muntplant (*Mentha piperita* voor pepermunt) bevat unieke bioactieve componenten die zowel smaak als gezondheidseffecten bepalen.
+Om volledig te begrijpen waar is verse muntthee goed voor, is het belangrijk te weten welke actieve stoffen verantwoordelijk zijn voor de werking. De samenstelling van de muntplant (_Mentha piperita_ voor pepermunt) bevat unieke bioactieve componenten die zowel smaak als gezondheidseffecten bepalen.
 
 :bol-card{query="boeken kruidengeneeskunde" ean="9783829015110"}
 
 ### De kracht van Menthol
 
-Menthol is de belangrijkste actieve stof in pepermunt en verantwoordelijk voor het kenmerkende verkoelende effect. Deze bioactieve verbinding zit voornamelijk in de etherische oliën van de plant. Het mentholgehalte verschilt tussen soorten: pepermunt (*Mentha piperita*) bevat aanzienlijk meer menthol dan aarmunt (*Mentha spicata*), wat het krachtiger maakt voor therapeutische toepassingen.
+Menthol is de belangrijkste actieve stof in pepermunt en verantwoordelijk voor het kenmerkende verkoelende effect. Deze bioactieve verbinding zit voornamelijk in de etherische oliën van de plant. Het mentholgehalte verschilt tussen soorten: pepermunt (_Mentha piperita_) bevat aanzienlijk meer menthol dan aarmunt (_Mentha spicata_), wat het krachtiger maakt voor therapeutische toepassingen.
 
 - Menthol is de actieve bioactieve stof die de meeste gezondheidseffecten veroorzaakt
 - Pepermunt bevat meer menthol dan aarmunt (spearmint)

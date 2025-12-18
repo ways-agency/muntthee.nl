@@ -4,17 +4,7 @@ import { useDateFormatter } from "reka-ui";
 const route = useRoute();
 
 const { data: article } = await useAsyncData(route.path, () => {
-  return queryCollection("articles")
-    .select(
-      "title",
-      "description",
-      "featured_image",
-      "body",
-      "published_time",
-      "modified_time",
-    )
-    .path(route.path)
-    .first();
+  return queryCollection("articles").path(route.path).first();
 });
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {

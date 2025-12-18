@@ -3,7 +3,7 @@ title: Verse Muntthee Gezond - 15 Bewezen Voordelen en Recepten
 description: Ontdek waarom verse muntthee zo gezond is met 15 wetenschappelijk onderbouwde voordelen plus praktische bereidingstips.
 meta.title: Verse Muntthee Gezond - 15 Voordelen + Recepten 2025
 meta.description: Verse muntthee biedt meer dan 15 gezondheidsvoordelen van betere spijsvertering tot stressverlichting. Inclusief recepten en bereidingstips.
-category: Tips & Uitleg
+category: tips-uitleg
 published_time: 2025-12-18T23:50:36.518+01:00
 modified_time: 2025-12-18T23:50:36.518+01:00
 ---
@@ -20,7 +20,7 @@ De échte magie gebeurt echter door de **etherische oliën** – vooral menthol,
 
 ### Verse munt versus theezakjes: Wat werkt beter?
 
-Is verse muntthee gezond*er* dan gedroogde varianten? Absoluut. Wanneer muntblaadjes worden gedroogd voor commerciële theezakjes, verdampt een groot deel van de etherische oliën. Het resultaat is een mildere smaak en minder potente gezondheidseffecten. 
+Is verse muntthee gezond*er* dan gedroogde varianten? Absoluut. Wanneer muntblaadjes worden gedroogd voor commerciële theezakjes, verdampt een groot deel van de etherische oliën. Het resultaat is een mildere smaak en minder potente gezondheidseffecten.
 
 **Verse munt** daarentegen bevat de hoogste concentratie vluchtige oliën, vooral wanneer je de blaadjes licht kneust voor het trekken. Voor medicinale toepassingen – zoals bij spijsverteringsproblemen of luchtwegklachten – is vers altijd de beste keuze. Wil je het maximale uit je thee halen? Gebruik dan takjes rechtstreeks uit je tuin of van de markt, en serveer ze in stijlvolle glazen die de aromatische dampen vasthouden.
 
@@ -56,7 +56,7 @@ Wanneer het griepseizoen aanbreekt, is verse muntthee je geheime wapen. De combi
 
 ### Natuurlijke verlichting bij verkoudheid en verstopte neus
 
-De kracht van menthol zit hem niet alleen in het drinken, maar ook in het **inademen van de stoom**. Houd je gezicht even boven een dampende kop verse muntthee – dit werkt als een natuurlijk decongestivum dat slijm losmaakt en je neusgangen opent. Dat verfrissende, koele gevoel? Dat komt door menthol dat receptoren in je neus prikkelt, waardoor het *aanvoelt* alsof je beter adem krijgt (en dat doe je ook!).
+De kracht van menthol zit hem niet alleen in het drinken, maar ook in het **inademen van de stoom**. Houd je gezicht even boven een dampende kop verse muntthee – dit werkt als een natuurlijk decongestivum dat slijm losmaakt en je neusgangen opent. Dat verfrissende, koele gevoel? Dat komt door menthol dat receptoren in je neus prikkelt, waardoor het _aanvoelt_ alsof je beter adem krijgt (en dat doe je ook!).
 
 Tegelijkertijd verzacht muntthee **keelpijn** dankzij ontstekingsremmende componenten. Een lepel Manuka-honing toevoegen versterkt dit effect nog eens, omdat honing zelf antibacterieel werkt en de keel coats met een beschermende laag.
 

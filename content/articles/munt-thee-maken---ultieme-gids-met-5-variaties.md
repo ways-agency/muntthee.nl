@@ -3,7 +3,7 @@ title: Munt Thee Maken - Ultieme Gids met 5 Variaties
 description: Leer hoe je perfecte muntthee maakt met dit eenvoudige basisrecept plus 5 heerlijke variaties zoals Marokkaanse stijl en gember-kaneel.
 meta.title: Munt Thee Maken - Complete Gids met Recepten en Variaties
 meta.description: Ontdek hoe je de perfecte muntthee maakt met verse munt. Inclusief basisrecept, Marokkaanse stijl en 5 gezonde variaties.
-category: Tips & Uitleg
+category: tips-uitleg
 published_time: 2025-12-18T23:50:25.703+01:00
 modified_time: 2025-12-18T23:50:25.703+01:00
 ---

@@ -3,7 +3,7 @@ title: Marokkaanse Muntthee maken - Authentiek recept stap voor stap
 description: Leer hoe je traditionele Marokkaanse muntthee maakt met dit gedetailleerde recept inclusief tips voor moderne keukens.
 meta.title: Marokkaanse Muntthee Recept - Authentieke Bereiding Thuis
 meta.description: Ontdek hoe je echte Marokkaanse muntthee maakt met gunpowder thee, verse munt en suiker. Stap voor stap uitleg met tips voor thuis.
-category: Tips & Uitleg
+category: tips-uitleg
 published_time: 2025-12-18T23:43:39.073+01:00
 modified_time: 2025-12-18T23:43:39.073+01:00
 ---

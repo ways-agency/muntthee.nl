@@ -3,7 +3,7 @@ title: Marokkaanse Thee Maken - Authentiek Recept met Stap-voor-Stap Uitleg
 description: Leer hoe je echte Marokkaanse muntthee maakt met gunpowder thee, verse munt en de juiste inschenktechniek voor perfecte smaak en schuim.
 meta.title: Marokkaanse Thee Maken - Complete Gids met Authentiek Recept
 meta.description: Ontdek het geheime recept voor traditionele Marokkaanse muntthee. Inclusief exacte verhoudingen, inschenktechniek en tips voor perfecte smaak.
-category: Tips & Uitleg
+category: tips-uitleg
 published_time: 2025-12-18T23:50:44.796+01:00
 modified_time: 2025-12-18T23:50:44.796+01:00
 ---
@@ -19,6 +19,7 @@ De kern van elke goede Marokkaanse thee is **Gunpowder groene thee**. Deze Chine
 Voor de munt geldt: **vers is het toverwoord**. Ideaal gebruik je Nana-munt (Marokkaanse munt), maar gewone verse munt uit de supermarkt werkt ook prima. Een grote, royale bos is essentieel – schroom niet om een hele hand vol takjes te gebruiken.
 
 De **exacte verhoudingen voor 1 liter water** zijn:
+
 - Circa 1 eetlepel Gunpowder thee (ongeveer 5-6 gram)
 - Een grote bos verse munt (minimaal 30 gram, gerust meer)
 - 4 tot 6 suikerklontjes (of naar smaak, traditioneel is de thee behoorlijk zoet)
@@ -44,6 +45,7 @@ Nu je de ingrediënten en materialen hebt, is het tijd voor de daadwerkelijke be
 Dit is dé stap die veel thuisbrouwers overslaan, maar die juist het verschil maakt tussen een bittere en een zachte, aromatische thee.
 
 **Het wassen van de theeblaadjes:**
+
 1. Doe de Gunpowder thee in de lege, droge berrad
 2. Giet een klein scheut kokend water (ongeveer 100 ml) over de theeblaadjes
 3. Wacht 20 seconden en giet dit water in een **apart glas** – dit is de 'ziel' van de thee, bewaar dit!
@@ -84,6 +86,7 @@ Dit mengen zorgt ervoor dat elk glas precies dezelfde perfecte balans heeft van 
 Nu komt het spectaculaire deel: het **hoog inschenken**. Dit is geen show-off trucje, maar heeft een functioneel doel.
 
 **Zo doe je het:**
+
 - Begin met de tuit van de berrad ongeveer 10 cm boven het glas
 - Schenk gestaag in en beweeg de pot langzaam omhoog tijdens het inschenken
 - Eindig met de pot op ongeveer 30-40 cm hoogte (of zo hoog als je kunt zonder te morsen)
@@ -99,13 +102,15 @@ Zelfs met het beste recept voor Marokkaanse muntthee kan het misgaan. Hieronder 
 ### Mijn thee is te bitter of te slap
 
 **Te bittere thee** is verreweg de meest voorkomende klacht. Dit komt vaak door:
+
 - **Het niet goed wassen** van de Gunpowder thee – volg stap 1 nauwgezet
 - **Te lang koken** met de munt erin – de munt mag maximaal 5 minuten meekoken
 - **Te veel theeblaadjes** gebruiken in verhouding tot water
 
-Een handige tip: als je weet dat jouw gasten gevoelig zijn voor bitterheid, voeg de munt dan pas toe *nadat* de thee 2-3 minuten heeft getrokken. Dit geeft minder kans op die verbrande, overgetrokken muntsmaak.
+Een handige tip: als je weet dat jouw gasten gevoelig zijn voor bitterheid, voeg de munt dan pas toe _nadat_ de thee 2-3 minuten heeft getrokken. Dit geeft minder kans op die verbrande, overgetrokken muntsmaak.
 
 **Te slappe thee** is het tegenovergestelde probleem en komt meestal door:
+
 - **Te weinig Gunpowder** – durf gerust 1 volle eetlepel te gebruiken
 - **Niet lang genoeg laten trekken** – de thee moet echt minimaal 4 minuten trekken
 - **Te veel water** bij te weinig thee – houd de verhoudingen aan
@@ -119,11 +124,13 @@ De **'verbrande' smaak voorkomen** doe je door de pot van het vuur te halen zodr
 Traditionele Marokkaanse thee is zoet – véél zoeter dan westerse smaken gewend zijn. Maar je kunt dit natuurlijk aanpassen aan je eigen voorkeur.
 
 **Suikerarm of suikervrij:** Je kunt de suiker verminderen of zelfs weglaten, maar besef dat de traditionele smaak leunt op de balans tussen zoet, bitter en fris. Zonder suiker komt de bitterheid van de groene thee meer naar voren. Compenseer dit door:
+
 - Iets minder Gunpowder te gebruiken
 - De thee korter te laten trekken
 - Meer munt toe te voegen voor extra frisheid
 
 **Seizoenstoevoegingen:** Marokkaanse thee kenmerkt zich door regionale en seizoensvariaties:
+
 - In de **winter**: voeg een takje alsem (chiba) of verbena toe voor een warmere, kruidige ondertoon
 - Bij **feestelijke gelegenheden**: een paar druppels oranjebloesemwater geeft een verfijnde, bloemenachtige geur
 - In de **zomer**: extra vers muntblaadjes voor een nog verfrissender effect

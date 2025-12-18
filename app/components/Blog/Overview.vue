@@ -21,7 +21,7 @@ const where = (collection: CollectionQueryBuilder<ArticlesCollectionItem>) => {
   return collection.where(
     "category",
     "=",
-    upperFirst(params.categorie as string)
+    upperFirst(params.categorie as string),
   );
 };
 
@@ -31,7 +31,7 @@ const { data: total, refresh: refreshTotal } = await useAsyncData(
     const articles = queryCollection("articles");
     where(articles);
     return articles.count();
-  }
+  },
 );
 
 const { data: articles, refresh } = await useAsyncData(
@@ -40,7 +40,7 @@ const { data: articles, refresh } = await useAsyncData(
     const articles = queryCollection("articles");
     where(articles);
     return articles.limit(itemsPerPage).skip(skip.value).all();
-  }
+  },
 );
 
 watch(page, () => {
@@ -50,6 +50,7 @@ watch(page, () => {
 </script>
 
 <template>
+  Test: {{ params.categorie }}
   <UBlogPosts v-if="articles && articles.length > 0">
     <UBlogPost
       v-for="article in articles"

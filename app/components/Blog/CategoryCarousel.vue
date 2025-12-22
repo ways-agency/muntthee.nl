@@ -1,9 +1,13 @@
 <script lang="ts" setup>
-const { path } = useRoute();
-
 const { categories } = useBlog();
+
 const items = computed(() =>
-  categories.value?.map(({ title, to, count }) => ({ title, to, count })),
+  categories.value?.map(({ title, to, count, active }) => ({
+    title,
+    to,
+    count,
+    active,
+  })),
 );
 </script>
 
@@ -18,11 +22,11 @@ const items = computed(() =>
   >
     <UButton
       :to="item.to"
-      :color="path === item.to ? 'primary' : 'neutral'"
-      :variant="path === item.to ? 'solid' : 'outline'"
+      :color="item.active ? 'primary' : 'neutral'"
+      :variant="item.active ? 'solid' : 'outline'"
     >
       {{ item.title }}
-      <small :class="path === item.to ? 'text-primary-100' : 'text-muted'"
+      <small :class="item.active ? 'text-primary-100' : 'text-muted'"
         >({{ item.count }})</small
       >
     </UButton>

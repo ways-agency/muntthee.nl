@@ -6,51 +6,48 @@ import type {
 import { kebabCase, upperFirst } from "es-toolkit/string";
 
 const route = useRoute();
-const { path, params, query } = route;
 
-const page = ref(query.page ? parseInt(query.page as string) : 1);
+const page = ref(route.query.page ? parseInt(route.query.page as string) : 1);
 const itemsPerPage = 2;
 const skip = computed(() => (page.value - 1) * itemsPerPage);
 
-const to = (page: number) => {
-  return { query: { page } };
-};
+const to = (page: number) => ({ query: { page } });
 
 const where = (collection: CollectionQueryBuilder<ArticlesCollectionItem>) => {
-  if (!params.categorie) return collection;
+  if (!route.query.categorie) return collection;
   return collection.where(
     "category",
     "=",
-    upperFirst(params.categorie as string),
+    upperFirst(route.query.categorie as string),
   );
 };
 
-const { data: total, refresh: refreshTotal } = await useAsyncData(
-  `articles--${kebabCase(path)}--total`,
+const { data: total } = await useAsyncData(
+  `articles--${kebabCase(route.path)}--total`,
   () => {
     const articles = queryCollection("articles");
     where(articles);
     return articles.count();
   },
+  {
+    watch: [() => route.query.categorie],
+  },
 );
 
-const { data: articles, refresh } = await useAsyncData(
-  `articles--${kebabCase(path)}`,
+const { data: articles } = await useAsyncData(
+  `articles--${kebabCase(route.path)}`,
   () => {
     const articles = queryCollection("articles");
     where(articles);
     return articles.limit(itemsPerPage).skip(skip.value).all();
   },
+  {
+    watch: [() => route.query.categorie],
+  },
 );
-
-watch(page, () => {
-  refreshTotal();
-  refresh();
-});
 </script>
 
 <template>
-  Test: {{ params.categorie }}
   <UBlogPosts v-if="articles && articles.length > 0">
     <UBlogPost
       v-for="article in articles"

@@ -3,7 +3,7 @@ title: Marokkaanse Thee Maken - Authentiek Recept met Stap-voor-Stap Uitleg
 description: Leer hoe je echte Marokkaanse muntthee maakt met gunpowder thee, verse munt en de juiste inschenktechniek voor perfecte smaak en schuim.
 meta.title: Marokkaanse Thee Maken - Complete Gids met Authentiek Recept
 meta.description: Ontdek het geheime recept voor traditionele Marokkaanse muntthee. Inclusief exacte verhoudingen, inschenktechniek en tips voor perfecte smaak.
-category: tips-uitleg
+category: Reviews
 published_time: 2025-12-18T23:50:44.796+01:00
 modified_time: 2025-12-18T23:50:44.796+01:00
 ---

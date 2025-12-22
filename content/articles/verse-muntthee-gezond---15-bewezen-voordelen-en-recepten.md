@@ -3,7 +3,7 @@ title: Verse Muntthee Gezond - 15 Bewezen Voordelen en Recepten
 description: Ontdek waarom verse muntthee zo gezond is met 15 wetenschappelijk onderbouwde voordelen plus praktische bereidingstips.
 meta.title: Verse Muntthee Gezond - 15 Voordelen + Recepten 2025
 meta.description: Verse muntthee biedt meer dan 15 gezondheidsvoordelen van betere spijsvertering tot stressverlichting. Inclusief recepten en bereidingstips.
-category: tips-uitleg
+category: Tips & Uitleg
 published_time: 2025-12-18T23:50:36.518+01:00
 modified_time: 2025-12-18T23:50:36.518+01:00
 ---

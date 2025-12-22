@@ -1,5 +1,9 @@
+<script lang="ts" setup>
+import { nl } from "@nuxt/ui/locale";
+</script>
+
 <template>
-  <UApp>
+  <UApp :locale="nl">
     <NuxtRouteAnnouncer />
     <NuxtLoadingIndicator />
 

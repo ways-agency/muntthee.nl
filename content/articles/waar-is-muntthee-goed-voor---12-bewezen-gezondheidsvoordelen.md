@@ -3,7 +3,7 @@ title: Waar Is Muntthee Goed Voor - 12 Bewezen Gezondheidsvoordelen
 description: Ontdek alle gezondheidsvoordelen van muntthee voor spijsvertering, stress en immuunsysteem. Van verse munt tot theezakjes.
 meta.title: Waar Is Muntthee Goed Voor - 12 Bewezen Voordelen en Tips
 meta.description: Leer waar muntthee goed voor is met 12 wetenschappelijk onderbouwde voordelen. Inclusief tips voor verse munt vs theezakjes.
-category: tips-uitleg
+category: Tips & Uitleg
 published_time: 2025-12-18T23:50:13.296+01:00
 modified_time: 2025-12-18T23:50:13.296+01:00
 ---

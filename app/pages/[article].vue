@@ -91,7 +91,7 @@ useSchemaOrg([
           />
         </template>
         <UPageBody>
-          <ContentRenderer :value="article" />
+          <ContentRenderer v-if="article" :value="article" />
 
           <USeparator />
 

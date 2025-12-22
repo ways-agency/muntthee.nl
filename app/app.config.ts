@@ -27,6 +27,7 @@ export default defineAppConfig({
     contentToc: {
       slots: {
         link: "font-bold",
+        linkText: "line-clamp-2 whitespace-normal",
       },
       variants: {
         active: {

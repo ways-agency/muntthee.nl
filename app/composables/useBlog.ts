@@ -4,8 +4,6 @@ import { upperFirst } from "es-toolkit/string";
 export const useBlog = () => {
   const route = useRoute();
 
-  console.log(route.query.categorie);
-
   const { data: articles } = useAsyncData("articles", () =>
     queryCollection("articles").all(),
   );

@@ -31,14 +31,6 @@ const Button = z.object({
   class: z.string().optional(),
 });
 
-const PageCard = z.object({
-  title: z.string(),
-  description: z.string(),
-  icon: z.string(),
-  to: z.string().optional(),
-  target: z.enum(["_blank", "_self"]).optional(),
-});
-
 const PageFeature = z.object({
   title: z.string(),
   description: z.string().optional(),

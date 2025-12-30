@@ -1,6 +1,6 @@
 ---
 title: Waar Is Muntthee Goed Voor
-description: Ontdek de gezondheidsvoordelen van muntthee: spijsvertering, stressvermindering, antioxidanten en meer. Alles over verse muntthee en haar werkzame stoffen.
+description: "Ontdek de gezondheidsvoordelen van muntthee: spijsvertering, stressvermindering, antioxidanten en meer. Alles over verse muntthee en haar werkzame stoffen."
 published_time: 2025-12-30
 modified_time: 2025-12-30
 seo:

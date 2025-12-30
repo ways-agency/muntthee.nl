@@ -82,14 +82,12 @@ useSchemaOrg([
     </UPageHero>
 
     <UContainer>
-      <UPage>
-        <template v-if="article?.body?.toc?.links" #left>
-          <UContentToc
-            :links="article.body.toc.links"
-            title="In dit artikel"
-            highlight
-          />
-        </template>
+      <UPage
+        :ui="{
+          center: 'lg:col-span-7',
+          right: 'lg:col-span-3',
+        }"
+      >
         <UPageBody>
           <ContentRenderer v-if="article" :value="article" />
 
@@ -105,6 +103,12 @@ useSchemaOrg([
               :name="author.name"
               :description="author.description"
               :avatar="author.avatar"
+            />
+
+            <UContentToc
+              :links="article?.body?.toc?.links"
+              title="In dit artikel"
+              highlight
             />
           </UPageAside>
         </template>

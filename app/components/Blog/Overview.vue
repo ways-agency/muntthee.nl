@@ -8,7 +8,7 @@ import { kebabCase, upperFirst } from "es-toolkit/string";
 const route = useRoute();
 
 const page = ref(route.query.page ? parseInt(route.query.page as string) : 1);
-const itemsPerPage = 2;
+const itemsPerPage = 6;
 const skip = computed(() => (page.value - 1) * itemsPerPage);
 
 const to = (page: number) => ({ query: { page } });

@@ -19,6 +19,12 @@ export default defineAppConfig({
         container: "lg:py-24",
       },
     },
+    blogPost: {
+      slots: {
+        title: "line-clamp-2",
+        description: "line-clamp-3",
+      },
+    },
     prose: {
       blockquote: {
         base: "border-primary",

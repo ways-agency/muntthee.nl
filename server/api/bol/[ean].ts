@@ -1,4 +1,4 @@
-import type { BolProduct } from "../../../app/components/types/bol";
+import type { BolProduct } from "@/types/bol";
 
 export default defineEventHandler(async (event) => {
   const accessToken = await getBolAccessToken();

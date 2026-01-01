@@ -2,7 +2,6 @@ import type { BolProduct } from "@/types/bol";
 
 export default defineEventHandler(async (event) => {
   const accessToken = await getBolAccessToken();
-  console.log(accessToken);
   const ean = getRouterParam(event, "ean");
 
   const product = await $fetch<BolProduct>(

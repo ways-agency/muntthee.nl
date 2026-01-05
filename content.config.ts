@@ -1,5 +1,10 @@
-import { defineContentConfig } from "@nuxt/content";
+import { defineCollection, defineContentConfig } from "@nuxt/content";
 
 export default defineContentConfig({
-  collections: {},
+  collections: {
+    articles: defineCollection({
+      type: "page",
+      source: "/blog/*/*.md",
+    }),
+  },
 });

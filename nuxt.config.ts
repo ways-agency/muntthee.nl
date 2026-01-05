@@ -24,6 +24,7 @@ export default defineNuxtConfig({
     indexable: false,
   },
   studio: {
+    dev: true,
     // Studio admin route (default: '/_studio')
     route: "/admin",
 

@@ -120,6 +120,13 @@ export default defineContentConfig({
       schema: z.object({
         navigation: z.string().editor({ hidden: true }),
         category: z.string(),
+        author: z.string(),
+        feautred_image: z.object({
+          src: z.string(),
+          alt: z.string().optional(),
+        }),
+        published_time: z.string(),
+        modified_time: z.string(),
       }),
     }),
     categories: defineCollection({

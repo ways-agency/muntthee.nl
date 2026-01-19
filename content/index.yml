@@ -1,28 +1,3 @@
-hero:
-  title: Muntthee.nl
-  description: Muntthee.nl is de bron voor alles over muntthee. Ontdek recepten, tips, geschiedenis en het laatste nieuws over muntthee. Gezond, verfrissend en eenvoudig thuis te maken.
-  links:
-    - label: Alle categorieën
-      to: /blog
-  background_image:
-    src: /images/muntthee-nl-hero.jpg
-    alt: Muntthee.nl hero
-popular_categories:
-  title: Populaire categorieën
-  description: Ontdek de populaire categorieën van muntthee.
-  cards:
-    - title: Recepten
-      description: Verschillende muntthee recepten voor ieder moment en smaak.
-      icon: i-lucide-book-open
-      to: #
-    - title: Gezondheid
-      description: Lees over de gezondheidsvoordelen en voedingswaarde van muntthee.
-      icon: i-lucide-heart-pulse
-      to: #
-    - title: Oorsprong
-      description: Ontdek de geschiedenis en oorsprong van muntthee wereldwijd.
-      icon: i-lucide-globe
-      to: #
 about_us:
   title: Over ons
   description: Muntthee.nl is een website over muntthee. We zijn gespecialiseerd in het leveren van informatie over muntthee.
@@ -32,6 +7,36 @@ about_us:
   links:
     - label: Lees meer
       to: /over-ons
+  features: []
+hero:
+  title: Muntthee.nl
+  description: Muntthee.nl is de bron voor alles over muntthee. Ontdek recepten, tips, geschiedenis en het laatste nieuws over muntthee. Gezond, verfrissend en eenvoudig thuis te maken.
+  links:
+    - label: Alle categorieën
+      to: /blog
+  background_image:
+    src: /images/muntthee-nl-hero.jpg
+    alt: Muntthee.nl hero
 latest_articles:
   title: Laatste artikelen
   description: Ontdek de laatste artikelen over muntthee.
+  features: []
+  links: []
+popular_categories:
+  title: Populaire categorieën
+  description: Ontdek de populaire categorieën van muntthee.
+  cards:
+    - title: Recepten
+      description: Verschillende muntthee recepten voor ieder moment en smaak.
+      icon: i-lucide-book-open
+      to: ""
+    - title: Gezondheid
+      description: Lees over de gezondheidsvoordelen en voedingswaarde van muntthee.
+      icon: i-lucide-heart-pulse
+      to: ""
+    - title: Oorsprong
+      description: Ontdek de geschiedenis en oorsprong van muntthee wereldwijd.
+      icon: i-lucide-globe
+      to: ""
+  features: []
+  links: []

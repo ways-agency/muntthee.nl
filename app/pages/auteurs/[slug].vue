@@ -2,7 +2,7 @@
 const route = useRoute();
 
 const { data: author } = await useAsyncData(`${route.path}-author`, () =>
-  queryCollection("authors").first()
+  queryCollection("authors").first(),
 );
 
 useRobotsRule(false);
@@ -15,7 +15,7 @@ useRobotsRule(false);
     orientation="horizontal"
   >
     <template #description>
-      <div class="prose max-w-full" v-html="author?.bio" />
+      <p v-html="author?.bio.split('\n').join('<br />')" />
     </template>
 
     <NuxtPicture

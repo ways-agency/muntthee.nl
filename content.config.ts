@@ -118,29 +118,21 @@ export default defineContentConfig({
         prefix: "/",
       },
       schema: z.object({
-        title: z.string(),
-        description: z.string(),
-        icon: z.string(),
-        category: z.string(),
-        featured_image: Image.optional(),
-        published_time: z.string(),
-        modified_time: z.string(),
+        navigation: z.string().editor({ hidden: true }),
       }),
     }),
     categories: defineCollection({
       type: "page",
       source: {
-        include: "categories/*.yml",
+        include: "categories/*.json",
         prefix: "/categorie",
       },
       schema: z.object({
-        title: z.string(),
-        description: z.string(),
-        icon: z.string(),
+        seo: z.string().editor({ hidden: true }),
       }),
     }),
     authors: defineCollection({
-      type: "page",
+      type: "data",
       source: {
         include: "authors/*.json",
         prefix: "/auteurs",
@@ -149,7 +141,7 @@ export default defineContentConfig({
         name: z.string(),
         description: z.string(),
         avatar: Avatar,
-        bio: z.string(),
+        bio: z.string().editor({ input: "textarea" }),
       }),
     }),
   },

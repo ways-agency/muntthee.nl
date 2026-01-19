@@ -119,6 +119,7 @@ export default defineContentConfig({
       },
       schema: z.object({
         navigation: z.string().editor({ hidden: true }),
+        category: z.string(),
       }),
     }),
     categories: defineCollection({

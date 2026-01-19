@@ -1,5 +1,6 @@
 ---
 title: "Pickwick muntthee review: Verfrissend of verrassend?"
+category: Producten
 description: "Ontdek alles over Pickwick muntthee. Van smaak tot beleving, we duiken diep in deze populaire thee en beantwoorden de vraag: is dit de perfecte muntthee voor jou?"
 seo:
   title: "Pickwick muntthee review: Eerlijke mening en aankoopadvies"

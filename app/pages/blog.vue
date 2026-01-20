@@ -7,9 +7,7 @@ const { data: page } = await useAsyncData("blog", () =>
 <template>
   <UContainer>
     <UPage>
-      <UPageHeader :title="page?.title" :description="page?.description">
-        <BlogCategoryCarousel />
-      </UPageHeader>
+      <UPageHeader :title="page?.title" :description="page?.description" />
 
       <UPageBody>
         <BlogOverview />

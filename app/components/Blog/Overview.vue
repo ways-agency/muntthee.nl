@@ -26,7 +26,7 @@ const { data: total } = await useAsyncData(
   `articles--${kebabCase(route.path)}--total`,
   () => {
     const articles = queryCollection("articles");
-    where(articles);
+    // where(articles);
     return articles.count();
   },
   {
@@ -38,7 +38,7 @@ const { data: articles } = await useAsyncData(
   `articles--${kebabCase(route.path)}`,
   () => {
     const articles = queryCollection("articles");
-    where(articles);
+    // where(articles);
     return articles.limit(itemsPerPage).skip(skip.value).all();
   },
   {

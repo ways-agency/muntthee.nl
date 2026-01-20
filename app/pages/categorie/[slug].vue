@@ -13,9 +13,7 @@ const { data: categorie } = await useAsyncData(`${slug}--categorie`, () =>
       <UPageHeader
         :title="categorie?.title"
         :description="categorie?.description"
-      >
-        <BlogCategoryCarousel />
-      </UPageHeader>
+      />
 
       <UPageBody>
         <BlogOverview />

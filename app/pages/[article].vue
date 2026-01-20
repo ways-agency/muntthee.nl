@@ -52,8 +52,12 @@ const { data: author } = await useAsyncData(`${route.path}-author`, () =>
         description: 'max-w-prose text-primary-100',
       }"
     >
-      <!-- <template #footer>
-        <ul
+      <template #footer>
+        <div class="flex flex-wrap gap-2">
+          <UBadge :label="article?.article_type" />
+          <UBadge :label="article?.category" />
+        </div>
+        <!--   <ul
           class="text-primary-100 flex flex-col flex-wrap gap-4 text-sm sm:flex-row sm:items-center"
         >
           <li>
@@ -62,8 +66,8 @@ const { data: author } = await useAsyncData(`${route.path}-author`, () =>
           <li>
             <p>Laatst bijgewerkt op {{ modifiedTime }}</p>
           </li>
-        </ul>
-      </template> -->
+        </ul>-->
+      </template>
 
       <NuxtPicture
         class="container:rounded-b-xl absolute inset-0 -z-10 aspect-video size-full overflow-hidden bg-black"

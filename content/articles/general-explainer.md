@@ -1,9 +1,11 @@
 ---
-title: "De gezonde voordelen van verse muntthee ontrafeld"
-description: "Ontdek de verfrissende wereld van verse muntthee. Van zijn rijke geschiedenis tot de moderne populariteit, we duiken diep in wat deze geliefde drank zo bijzonder maakt en waarom het een vast onderdeel is van een gezonde levensstijl. Laat je leiden door de aroma's en ontdek de geheimen van dit groene goud."
+title: De gezonde voordelen van verse muntthee ontrafeld
+article_type: General Explainer
+category: Gezondheid
+description: Ontdek de verfrissende wereld van verse muntthee. Van zijn rijke geschiedenis tot de moderne populariteit, we duiken diep in wat deze geliefde drank zo bijzonder maakt en waarom het een vast onderdeel is van een gezonde levensstijl. Laat je leiden door de aroma's en ontdek de geheimen van dit groene goud.
 seo:
-  title: "Verse muntthee gezond? Ontdek de voordelen | [Website Name]"
-  description: "Benieuwd of verse muntthee gezond is? Lees alles over de verfrissende voordelen, de bereiding en tips voor de perfecte kop. Jouw gids naar wellness met munt."
+  title: Verse muntthee gezond? Ontdek de voordelen | [Website Name]
+  description: Benieuwd of verse muntthee gezond is? Lees alles over de verfrissende voordelen, de bereiding en tips voor de perfecte kop. Jouw gids naar wellness met munt.
 ---
 
 Verse muntthee, een eenvoudige doch verfrissende drank, is veel meer dan alleen een dorstlesser. Je vraagt je misschien af: **is verse muntthee gezond**? Het antwoord is een volmondig ja! Deze geliefde thee, die al eeuwenlang wordt gewaardeerd om zijn unieke smaak en aroma, zit boordevol natuurlijke eigenschappen die een positieve invloed kunnen hebben op je welzijn. Van de levendige groene blaadjes in je kopje tot de kalmerende geur die vrijkomt, biedt verse muntthee een heerlijke én gezonde ervaring voor lichaam en geest.

@@ -119,7 +119,25 @@ export default defineContentConfig({
       },
       schema: z.object({
         navigation: z.string().editor({ hidden: true }),
-        category: z.string(),
+        category: z.enum([
+          "De muntplant",
+          "Gezondheid",
+          "Producten",
+          "Recepten",
+        ]),
+        article_type: z.enum([
+          "Product Review",
+          "Product Comparison",
+          "Best X",
+          "Buyers Guide",
+          "How-to Guide",
+          "Listicle",
+          "Case Study",
+          "Resource Page",
+          "Seasonal Content",
+          "Checklist",
+          "General Explainer",
+        ]),
         author: z.string(),
         feautred_image: z.object({
           src: z.string(),

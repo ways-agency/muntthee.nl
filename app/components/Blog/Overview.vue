@@ -57,7 +57,7 @@ const { data: articles } = await useAsyncData(
       :to="article.path"
       :image="article.featured_image"
       :date="article.published_time"
-      :badge="article.category"
+      :badge="article.article_type"
     />
   </UBlogPosts>
 

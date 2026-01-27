@@ -34,15 +34,6 @@ const strikeThroughPrice = computed(() => {
 </script>
 
 <template>
-  <!-- <ProseCard class="flex items-center gap-4">
-    <USkeleton class="h-12 w-12 rounded-full" />
-
-    <div class="grid gap-2">
-      <USkeleton class="h-4 w-[250px]" />
-      <USkeleton class="h-4 w-[200px]" />
-    </div>
-  </ProseCard> -->
-
   <ProseCard :to="product?.partnerUrl">
     <div class="flex items-center gap-4">
       <USkeleton
@@ -57,7 +48,8 @@ const strikeThroughPrice = computed(() => {
         :img-attrs="{
           width: product?.image?.width,
           height: product?.image?.height,
-          class: 'max-w-[100px] max-h-[100px] rounded-lg bg-white p-2',
+          class:
+            'max-w-[100px] max-h-[100px] rounded-lg bg-white mix-blend-darken',
         }"
       />
 

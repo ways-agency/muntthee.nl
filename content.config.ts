@@ -119,6 +119,7 @@ export default defineContentConfig({
       },
       schema: z.object({
         navigation: z.string().editor({ hidden: true }),
+        draft: z.boolean().optional().default(true),
         category: z.enum([
           "De muntplant",
           "Gezondheid",

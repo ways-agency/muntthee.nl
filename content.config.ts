@@ -144,8 +144,6 @@ export default defineContentConfig({
           src: z.string(),
           alt: z.string().optional(),
         }),
-        published_time: z.string(),
-        modified_time: z.string(),
       }),
     }),
     categories: defineCollection({

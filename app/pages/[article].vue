@@ -1,9 +1,10 @@
 <script setup lang="ts">
 const route = useRoute();
 
-const { data: article } = await useAsyncData(route.path, () => {
-  return queryCollection("articles").path(route.path).first();
-});
+const { data: article } = await useAsyncData(route.path, () =>
+  queryCollection("articles").path(route.path).first(),
+);
+useSeoMeta(article?.value?.seo || {});
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
   return queryCollectionItemSurroundings("articles", route.path);
@@ -41,6 +42,9 @@ const { data: author } = await useAsyncData(`${route.path}-author`, () =>
 
 <template>
   <article>
+    <pre>
+      {{ article }}
+    </pre>
     <UPageHero
       :title="article?.title"
       :description="article?.description"

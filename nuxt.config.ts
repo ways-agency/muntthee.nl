@@ -14,6 +14,13 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@nuxt/content",
     "nuxt-studio",
+    [
+      "nuxt-content-git",
+      {
+        createdAtName: "dateCreated",
+        updatedAtName: "dateModified",
+      },
+    ],
   ],
   css: ["~/assets/css/main.css"],
   ui: {
@@ -22,11 +29,6 @@ export default defineNuxtConfig({
   site: {
     url: "https://muntthee.nl/",
     indexable: false,
-  },
-  content: {
-    build: {
-      transformers: ["~~/transformers/created-at"],
-    },
   },
   studio: {
     // Studio admin route (default: '/_studio')

@@ -119,6 +119,8 @@ export default defineContentConfig({
       },
       schema: z.object({
         navigation: z.string().editor({ hidden: true }),
+        createdAt: z.date(),
+        updatedAt: z.date(),
         draft: z.boolean().optional().default(true),
         category: z.enum([
           "De muntplant",

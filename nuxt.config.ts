@@ -28,7 +28,10 @@ export default defineNuxtConfig({
   },
   content: {
     build: {
-      transformers: ["~~/transformers/title-suffix"],
+      transformers: [
+        "~~/transformers/title-suffix",
+        "~~/transformers/date-meta",
+      ],
     },
   },
   site: {

@@ -26,6 +26,11 @@ export default defineNuxtConfig({
   ui: {
     colorMode: false,
   },
+  content: {
+    build: {
+      transformers: ["~~/transformers/title-suffix"],
+    },
+  },
   site: {
     url: "https://muntthee.nl/",
     indexable: false,

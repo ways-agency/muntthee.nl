@@ -10,11 +10,11 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/content": "3.11.0",
+    "@nuxt/content": "3.11.2",
     "@nuxt/eslint": "1.13.0",
     "@nuxt/image": "2.0.0",
     "@nuxt/ui": "4.4.0",
-    "@nuxtjs/seo": "^3.3.0",
+    "@nuxtjs/seo": "^3.4.0",
     "better-sqlite3": "^12.6.2",
     "es-toolkit": "^1.44.0",
     "eslint@latest": "link:nuxt/eslint@latest",

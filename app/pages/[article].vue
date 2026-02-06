@@ -86,7 +86,6 @@ const dateModified = useDateFormat(
       </template>
 
       <NuxtPicture
-        v-if="article?.featuredImage?.src"
         class="container:rounded-b-xl absolute inset-0 -z-10 aspect-video size-full overflow-hidden bg-black"
         :src="article?.featuredImage?.src"
         :alt="article?.featuredImage?.alt"

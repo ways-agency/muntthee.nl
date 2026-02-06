@@ -1,41 +1,38 @@
 <script lang="ts" setup>
-// import type { BolProduct } from "@/types/bol";
+import type { BolProduct } from "@/types/bol";
 
-// const props = defineProps<{
-//   ean: string;
-// }>();
+const props = defineProps<{
+  ean: string;
+}>();
 
-// const { data: product, pending } = useFetch<BolProduct>(
-//   `/api/bol/${props.ean}`,
-//   {
-//     server: false,
-//   },
-// );
+const { data: product, pending } = useFetch<BolProduct>(
+  `/api/bol/${props.ean}`,
+  { server: false },
+);
 
-// const ratingWidth = computed(() => {
-//   return `${(product?.value?.rating ?? 0) * 20}%`;
-// });
+const ratingWidth = computed(() => {
+  return `${(product?.value?.rating ?? 0) * 20}%`;
+});
 
-// const price = computed(() => {
-//   if (!product?.value?.offer?.price) return null;
-//   return Intl.NumberFormat("nl-NL", {
-//     style: "currency",
-//     currency: "EUR",
-//   }).format(product.value.offer.price);
-// });
+const price = computed(() => {
+  if (!product?.value?.offer?.price) return null;
+  return Intl.NumberFormat("nl-NL", {
+    style: "currency",
+    currency: "EUR",
+  }).format(product.value.offer.price);
+});
 
-// const strikeThroughPrice = computed(() => {
-//   if (!product?.value?.offer?.strikeThroughPrice) return null;
-//   return Intl.NumberFormat("nl-NL", {
-//     style: "currency",
-//     currency: "EUR",
-//   }).format(product.value.offer.strikeThroughPrice);
-// });
+const strikeThroughPrice = computed(() => {
+  if (!product?.value?.offer?.strikeThroughPrice) return null;
+  return Intl.NumberFormat("nl-NL", {
+    style: "currency",
+    currency: "EUR",
+  }).format(product.value.offer.strikeThroughPrice);
+});
 </script>
 
 <template>
-  <p>Card</p>
-  <!-- <ProseCard :to="product?.partnerUrl">
+  <ProseCard :to="product?.partnerUrl">
     <div class="flex items-center gap-4">
       <USkeleton
         v-if="pending"
@@ -127,5 +124,5 @@
         </div>
       </div>
     </div>
-  </ProseCard> -->
+  </ProseCard>
 </template>

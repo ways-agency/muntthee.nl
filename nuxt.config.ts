@@ -14,19 +14,10 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@nuxt/content",
     "nuxt-studio",
-    [
-      "nuxt-content-git",
-      {
-        createdAtName: "dateCreated",
-        updatedAtName: "dateModified",
-      },
-    ],
     "@vueuse/nuxt",
   ],
   css: ["~/assets/css/main.css"],
-  ui: {
-    colorMode: false,
-  },
+  ui: { colorMode: false },
   hooks: {
     "content:file:afterParse": async (ctx) => {
       const { file, content } = ctx;
@@ -46,10 +37,7 @@ export default defineNuxtConfig({
       }
     },
   },
-  site: {
-    url: "https://muntthee.nl/",
-    indexable: false,
-  },
+  site: { url: "https://muntthee.nl/", indexable: false },
   studio: {
     // Studio admin route (default: '/_studio')
     route: "/admin",

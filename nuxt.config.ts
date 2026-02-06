@@ -28,7 +28,13 @@ export default defineNuxtConfig({
       );
 
       content.dateCreated = content.dateCreated ?? birthtime;
-      content.dateModified = content.dateModified ?? mtime;
+      content.dateModified = mtime;
+
+      console.log("draft", content.draft);
+      console.log("dateCreated", content.dateCreated);
+      console.log("dateModified", content.dateModified);
+      console.log("datePublished", content.datePublished);
+      console.log("--------------------------------");
 
       if (!content.draft) {
         content.datePublished = (content.datePublished as Date) ?? mtime;

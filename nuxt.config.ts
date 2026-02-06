@@ -27,14 +27,15 @@ export default defineNuxtConfig({
         fs.stat(path.join(file.path)),
       );
 
-      content.dateCreated = content.dateCreated ?? birthtime;
-      content.dateModified = mtime;
-
+      console.log("path", file.path);
       console.log("draft", content.draft);
       console.log("dateCreated", content.dateCreated);
       console.log("dateModified", content.dateModified);
       console.log("datePublished", content.datePublished);
       console.log("--------------------------------");
+
+      content.dateCreated = content.dateCreated ?? birthtime;
+      content.dateModified = mtime;
 
       if (!content.draft) {
         content.datePublished = (content.datePublished as Date) ?? mtime;

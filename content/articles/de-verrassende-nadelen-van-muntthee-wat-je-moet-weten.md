@@ -1,6 +1,6 @@
 ---
 title: "De verrassende nadelen van muntthee: wat je moet weten"
-article_type: Listicle
+articleType: Listicle
 category: Gezondheid
 description: Muntthee is geliefd om zijn verfrissende smaak en vermeende voordelen, maar wist je dat er ook een keerzijde is? Duik met ons mee in de minder bekende aspecten van deze populaire drank.
 draft: true
@@ -9,7 +9,7 @@ seo:
   description: Ontdek de onverwachte nadelen van muntthee, van maagklachten tot interacties met medicatie. Blijf geïnformeerd en geniet bewust van je kopje thee.
 ---
 
-Muntthee. Geliefd, verfrissend, en vaak geprezen. Maar ook hier geldt: balans is cruciaal. Voordat je onbeperkt doorzet met die dagelijkse kop, is het slim om de *nadelen muntthee* te kennen. Ja, zelfs dit kruidige brouwsel heeft een keerzijde. Hier lees je wat je moet weten om bewust te genieten.
+Muntthee. Geliefd, verfrissend, en vaak geprezen. Maar ook hier geldt: balans is cruciaal. Voordat je onbeperkt doorzet met die dagelijkse kop, is het slim om de _nadelen muntthee_ te kennen. Ja, zelfs dit kruidige brouwsel heeft een keerzijde. Hier lees je wat je moet weten om bewust te genieten.
 
 ## 1. Pas op voor maagklachten en brandend maagzuur
 
@@ -43,10 +43,10 @@ Zoals met veel zure dranken, kan ook muntthee – vooral in grote hoeveelheden e
 
 ## 6. De kwaliteit van je muntthee: pesticiden en verontreinigingen
 
-Niet alle muntthee is gelijk. Conventioneel geteelde munt kan residuen van pesticiden bevatten. Deze chemicaliën wil je natuurlijk liever niet in je kopje. Kies daarom altijd voor biologische muntthee om de *nadelen muntthee* door ongewenste stoffen te minimaliseren en puur te genieten.
+Niet alle muntthee is gelijk. Conventioneel geteelde munt kan residuen van pesticiden bevatten. Deze chemicaliën wil je natuurlijk liever niet in je kopje. Kies daarom altijd voor biologische muntthee om de _nadelen muntthee_ door ongewenste stoffen te minimaliseren en puur te genieten.
 
 :bol-card{ean="3259920065775" query="Biologische muntthee"}
 
 ## Bewust genieten
 
-Muntthee blijft een heerlijke drank, maar kennis van de mogelijke *nadelen muntthee* helpt je bewuster te consumeren. Varieer, luister naar je lichaam, en kies altijd voor kwaliteit.
+Muntthee blijft een heerlijke drank, maar kennis van de mogelijke _nadelen muntthee_ helpt je bewuster te consumeren. Varieer, luister naar je lichaam, en kies altijd voor kwaliteit.

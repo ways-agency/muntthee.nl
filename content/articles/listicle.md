@@ -1,6 +1,6 @@
 ---
 title: "De onverwachte nadelen van muntthee: wat je moet weten"
-article_type: "Listicle"
+articleType: "Listicle"
 category: Gezondheid
 description: "Muntthee is geliefd om zijn verfrissende smaak en vermeende voordelen, maar wist je dat er ook minder bekende keerzijden zijn? Ontdek de potentiële nadelen van deze populaire drank voordat je je volgende kopje inschenkt."
 seo:

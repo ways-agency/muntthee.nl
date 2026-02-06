@@ -1,6 +1,6 @@
 ---
 title: "Zelf verfrissende muntthee maken: jouw complete gids"
-article_type: "How-to Guide"
+articleType: "How-to Guide"
 category: Recepten
 description: "Ontdek hoe je thuis de perfecte muntthee zet, een heerlijk en eenvoudig proces dat je zintuigen prikkelt en ontspanning biedt. Volg onze stapsgewijze handleiding om van deze traditionele drank te genieten."
 seo:

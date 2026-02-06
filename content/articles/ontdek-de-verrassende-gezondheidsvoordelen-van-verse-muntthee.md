@@ -1,6 +1,6 @@
 ---
 title: "Ontdek de verrassende gezondheidsvoordelen van verse muntthee"
-article_type: "General Explainer"
+articleType: "General Explainer"
 category: Gezondheid
 description: "Duik in de wereld van verse muntthee en ontdek hoe deze verfrissende drank niet alleen heerlijk is, maar ook een schat aan voordelen voor je welzijn biedt. Leer meer over de oorsprong, de gezondheidseffecten en hoe je er optimaal van kunt genieten."
 seo:

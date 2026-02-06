@@ -126,7 +126,7 @@ export default defineContentConfig({
           "Producten",
           "Recepten",
         ]),
-        article_type: z.enum([
+        articleType: z.enum([
           "Product Review",
           "Product Comparison",
           "Best X",
@@ -140,7 +140,7 @@ export default defineContentConfig({
           "General Explainer",
         ]),
         author: z.string(),
-        feautred_image: z.object({
+        featuredImage: z.object({
           src: z.string(),
           alt: z.string().optional(),
         }),

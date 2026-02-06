@@ -21,6 +21,7 @@ export default defineNuxtConfig({
         updatedAtName: "dateModified",
       },
     ],
+    "@vueuse/nuxt",
   ],
   css: ["~/assets/css/main.css"],
   ui: {

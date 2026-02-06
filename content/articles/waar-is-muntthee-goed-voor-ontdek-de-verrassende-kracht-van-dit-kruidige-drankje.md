@@ -1,6 +1,6 @@
 ---
 title: "Waar is muntthee goed voor? Ontdek de verrassende kracht van dit kruidige drankje"
-article_type: "General Explainer"
+articleType: "General Explainer"
 category: Gezondheid
 description: "Duik in de wereld van muntthee en leer waarom dit verfrissende drankje niet alleen lekker is, maar ook tal van voordelen biedt voor uw welzijn. Van spijsvertering tot ontspanning, ontdek de geheimen van munt."
 seo:

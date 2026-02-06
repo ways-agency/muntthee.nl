@@ -1,6 +1,6 @@
 ---
 title: "Ontdek de wereld van verse munt: jouw gids voor pure verfrissing en welzijn"
-article_type: Buyers Guide
+articleType: Buyers Guide
 category: Producten
 description: Dompel jezelf onder in de verkwikkende wereld van verse munt. Van zijn rijke geschiedenis tot zijn veelzijdige toepassingen, deze gids onthult alles wat je moet weten om het meeste uit deze aromatische held te halen voor je thee, gerechten en welzijn.
 draft: false

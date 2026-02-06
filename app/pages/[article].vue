@@ -14,16 +14,26 @@ const { data: author } = await useAsyncData(`${route.path}-author`, () =>
   queryCollection("authors").first(),
 );
 
-// const { locale } = useLocale();
-// const formatter = useDateFormatter(locale.value.code);
-// const publishedTime = formatter.custom(
-//   new Date(article?.value?.published_time ?? ""),
-//   { dateStyle: "medium" },
-// );
-// const modifiedTime = formatter.custom(
-//   new Date(article?.value?.modified_time ?? ""),
-//   { dateStyle: "medium" },
-// );
+const {
+  locale: {
+    value: { code: localeCode },
+  },
+} = useLocale();
+
+const DATE_FORMAT = "DD MMMM YYYY";
+const DATE_OPTIONS = { locales: localeCode };
+
+const datePublished = useDateFormat(
+  article?.value?.datePublished,
+  DATE_FORMAT,
+  DATE_OPTIONS,
+);
+
+const dateModified = useDateFormat(
+  article?.value?.dateModified,
+  DATE_FORMAT,
+  DATE_OPTIONS,
+);
 
 // useSchemaOrg([
 //   defineArticle({
@@ -35,28 +45,13 @@ const { data: author } = await useAsyncData(`${route.path}-author`, () =>
 //     datePublished: publishedTime,
 //     dateModified: modifiedTime,
 //     headline: article?.value?.title,
-//     image: article?.value?.featured_image,
+//     image: article?.value?.featuredImage,
 //   }),
 // ]);
 </script>
 
 <template>
   <article>
-    dateCreated: {{ article?.dateCreated }}
-    <br />
-    dateModified: {{ article?.dateModified }}
-    <br />
-    datePublished: {{ article?.datePublished }}
-    <br />
-
-    meta:
-    <pre>
-      {{ article?.meta }}
-    </pre>
-
-    <pre>
-      {{ article }}
-    </pre>
     <UPageHero
       :title="article?.title"
       :description="article?.description"
@@ -69,26 +64,22 @@ const { data: author } = await useAsyncData(`${route.path}-author`, () =>
       }"
     >
       <template #footer>
-        <div class="flex flex-wrap gap-2">
-          <UBadge :label="article?.article_type" />
-          <UBadge :label="article?.category" />
-        </div>
-        <!--   <ul
+        <ul
           class="text-primary-100 flex flex-col flex-wrap gap-4 text-sm sm:flex-row sm:items-center"
         >
           <li>
-            <p>Gepubliceerd op {{ publishedTime }}</p>
+            <p>Gepubliceerd op {{ datePublished }}</p>
           </li>
           <li>
-            <p>Laatst bijgewerkt op {{ modifiedTime }}</p>
+            <p>Laatst bijgewerkt op {{ dateModified }}</p>
           </li>
-        </ul>-->
+        </ul>
       </template>
 
       <NuxtPicture
         class="container:rounded-b-xl absolute inset-0 -z-10 aspect-video size-full overflow-hidden bg-black"
-        :src="article?.featured_image"
-        :alt="article?.title"
+        :src="article?.featuredImage.src"
+        :alt="article?.featuredImage.alt"
         :img-attrs="{
           class: 'size-full object-cover opacity-40 []',
           fetchpriority: 'high',

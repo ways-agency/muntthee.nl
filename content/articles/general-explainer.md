@@ -1,6 +1,6 @@
 ---
 title: Ontdek de verrassende voordelen van muntthee voor lichaam en geest
-article_type: General Explainer
+articleType: General Explainer
 category: Gezondheid
 description: Duik in de wereld van muntthee en leer waarom deze verfrissende drank al eeuwenlang wordt geprezen om zijn veelzijdige eigenschappen. Van spijsvertering tot ontspanning, we onthullen waar muntthee allemaal goed voor is en hoe je het beste geniet van deze aromatische drank.
 draft: true

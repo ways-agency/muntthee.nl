@@ -18,29 +18,29 @@ export default defineNuxtConfig({
   ],
   css: ["~/assets/css/main.css"],
   ui: { colorMode: false },
-  // hooks: {
-  //   "content:file:afterParse": async (ctx) => {
-  //     const { file, content } = ctx;
+  hooks: {
+    "content:file:afterParse": async (ctx) => {
+      const { file, content } = ctx;
 
-  //     const path = await import("path");
-  //     const { mtime, birthtime } = await import("fs/promises").then((fs) =>
-  //       fs.stat(path.join(file.path)),
-  //     );
+      const path = await import("path");
+      const { mtime, birthtime } = await import("fs/promises").then((fs) =>
+        fs.stat(path.join(file.path)),
+      );
 
-  //     console.log("path", file.path);
-  //     console.log("mtime", mtime);
-  //     console.log("birthtime", birthtime);
+      console.log("path", file.path);
+      console.log("mtime", mtime);
+      console.log("birthtime", birthtime);
 
-  //     content.dateCreated = birthtime;
-  //     content.dateModified = mtime;
+      content.dateCreated = birthtime;
+      content.dateModified = mtime;
 
-  //     if (!content.draft) {
-  //       content.datePublished = (content.datePublished as Date) ?? mtime;
-  //     } else {
-  //       content.datePublished = (content.datePublished as Date) ?? undefined;
-  //     }
-  //   },
-  // },
+      if (!content.draft) {
+        content.datePublished = (content.datePublished as Date) ?? mtime;
+      } else {
+        content.datePublished = (content.datePublished as Date) ?? undefined;
+      }
+    },
+  },
   site: { url: "https://muntthee.nl/", indexable: false },
   studio: {
     // Studio admin route (default: '/_studio')

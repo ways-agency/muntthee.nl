@@ -13,7 +13,7 @@ const skip = computed(() => (page.value - 1) * itemsPerPage);
 
 const to = (page: number) => ({ query: { page } });
 
-const where = (collection: CollectionQueryBuilder<ArticlesCollectionItem>) => {
+const _where = (collection: CollectionQueryBuilder<ArticlesCollectionItem>) => {
   if (!route.query.categorie) return collection;
   return collection.where(
     "category",
@@ -25,7 +25,7 @@ const where = (collection: CollectionQueryBuilder<ArticlesCollectionItem>) => {
 const { data: total } = await useAsyncData(
   `articles--${kebabCase(route.path)}--total`,
   () => {
-    const articles = queryCollection("articles");
+    const articles = queryCollection("articles").where("draft", "=", false);
     // where(articles);
     return articles.count();
   },
@@ -37,7 +37,7 @@ const { data: total } = await useAsyncData(
 const { data: articles } = await useAsyncData(
   `articles--${kebabCase(route.path)}`,
   () => {
-    const articles = queryCollection("articles");
+    const articles = queryCollection("articles").where("draft", "=", false);
     // where(articles);
     return articles.limit(itemsPerPage).skip(skip.value).all();
   },
@@ -56,7 +56,7 @@ const { data: articles } = await useAsyncData(
       :description="article.description"
       :to="article.path"
       :image="article.featuredImage"
-      :date="article.published_time"
+      :date="article.datePublished"
       :badge="article.articleType"
     />
   </UBlogPosts>

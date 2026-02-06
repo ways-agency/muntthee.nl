@@ -4,6 +4,15 @@ const route = useRoute();
 const { data: article } = await useAsyncData(route.path, () =>
   queryCollection("articles").path(route.path).first(),
 );
+
+// Return 404 when article is missing (prevents prerender 500s)
+if (!article.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Artikel niet gevonden",
+  });
+}
+
 useSeoMeta(article?.value?.seo || {});
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
@@ -77,9 +86,10 @@ const dateModified = useDateFormat(
       </template>
 
       <NuxtPicture
+        v-if="article?.featuredImage?.src"
         class="container:rounded-b-xl absolute inset-0 -z-10 aspect-video size-full overflow-hidden bg-black"
-        :src="article?.featuredImage.src"
-        :alt="article?.featuredImage.alt"
+        :src="article?.featuredImage?.src"
+        :alt="article?.featuredImage?.alt"
         :img-attrs="{
           class: 'size-full object-cover opacity-40 []',
           fetchpriority: 'high',

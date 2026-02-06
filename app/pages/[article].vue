@@ -22,51 +22,16 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 const { data: author } = await useAsyncData(`${route.path}-author`, () =>
   queryCollection("authors").first(),
 );
-
-const {
-  locale: {
-    value: { code: localeCode },
-  },
-} = useLocale();
-
-const DATE_FORMAT = "DD MMMM YYYY";
-const DATE_OPTIONS = { locales: localeCode };
-
-const datePublished = useDateFormat(
-  article?.value?.datePublished,
-  DATE_FORMAT,
-  DATE_OPTIONS,
-);
-
-const dateModified = useDateFormat(
-  article?.value?.dateModified,
-  DATE_FORMAT,
-  DATE_OPTIONS,
-);
-
-// useSchemaOrg([
-//   defineArticle({
-//     "@type": "BlogPosting",
-//     author: {
-//       name: author?.value?.name,
-//       url: "/auteurs/" + author?.value?.path,
-//     },
-//     datePublished: publishedTime,
-//     dateModified: modifiedTime,
-//     headline: article?.value?.title,
-//     image: article?.value?.featuredImage,
-//   }),
-// ]);
 </script>
 
 <template>
   <article>
-    dateCreated: {{ article?.dateCreated }}
+    readingTime: {{ article?.readingTime }}
     <br />
-    dateModified: {{ article?.dateModified }}
+    readingTimeTwo: {{ article?.readingTimeTwo }}
     <br />
-    datePublished: {{ article?.datePublished }}
-
+    readingTimeThree: {{ article?.readingTimeThree }}
+    <br />
     <UPageHero
       :title="article?.title"
       :description="article?.description"
@@ -78,27 +43,6 @@ const dateModified = useDateFormat(
         description: 'max-w-prose text-primary-100',
       }"
     >
-      <template #footer>
-        <ul
-          class="text-primary-100 flex flex-col flex-wrap gap-4 text-sm sm:flex-row sm:items-center"
-        >
-          <li v-if="article?.datePublished">
-            <p>
-              Gepubliceerd op
-              <time :datetime="article?.datePublished">{{
-                datePublished
-              }}</time>
-            </p>
-          </li>
-          <li>
-            <p>
-              Laatst bijgewerkt op
-              <time :datetime="article?.dateModified">{{ dateModified }}</time>
-            </p>
-          </li>
-        </ul>
-      </template>
-
       <NuxtPicture
         class="container:rounded-b-xl absolute inset-0 -z-10 aspect-video size-full overflow-hidden bg-black"
         :src="article?.featuredImage?.src"

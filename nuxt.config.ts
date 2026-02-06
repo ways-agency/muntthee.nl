@@ -18,28 +18,17 @@ export default defineNuxtConfig({
   ],
   css: ["~/assets/css/main.css"],
   ui: { colorMode: false },
-  content: {
-    build: {
-      transformers: ["~~/transformers/title-suffix"],
-    },
-  },
   hooks: {
-    "content:file:afterParse": async (ctx) => {
+    "content:file:afterParse"(ctx) {
       const { file, content } = ctx;
 
-      const path = await import("path");
-      const { mtime, birthtime } = await import("fs/promises").then((fs) =>
-        fs.stat(path.join(file.path)),
-      );
+      const wordsPerMinute = 180;
+      const text = typeof file.body === "string" ? file.body : "";
+      const wordCount = text.split(/\s+/).length;
 
-      content.dateCreated = content.dateCreated ?? birthtime;
-      content.dateModified = mtime;
-
-      if (!content.draft) {
-        content.datePublished = (content.datePublished as Date) ?? mtime;
-      } else {
-        content.datePublished = (content.datePublished as Date) ?? undefined;
-      }
+      content.readingTime = Math.ceil(wordCount / wordsPerMinute);
+      content.readingTimeTwo = Math.ceil((wordCount / wordsPerMinute) * 2);
+      content.readingTimeThree = Math.ceil((wordCount / wordsPerMinute) * 3);
     },
   },
   site: { url: "https://muntthee.nl/", indexable: false },

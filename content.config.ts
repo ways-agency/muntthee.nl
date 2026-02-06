@@ -144,9 +144,9 @@ export default defineContentConfig({
           src: z.string(),
           alt: z.string().optional(),
         }),
-        dateCreated: property(z.date()).editor({ hidden: true }),
-        dateModified: property(z.date()).editor({ hidden: true }),
-        datePublished: property(z.date()).editor({ hidden: true }),
+        readingTime: z.number(),
+        readingTimeTwo: property(z.number()),
+        readingTimeThree: property(z.number()).editor({ hidden: true }),
       }),
     }),
     categories: defineCollection({

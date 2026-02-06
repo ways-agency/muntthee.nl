@@ -61,6 +61,12 @@ const dateModified = useDateFormat(
 
 <template>
   <article>
+    dateCreated: {{ article?.dateCreated }}
+    <br />
+    dateModified: {{ article?.dateModified }}
+    <br />
+    datePublished: {{ article?.datePublished }}
+
     <UPageHero
       :title="article?.title"
       :description="article?.description"
@@ -76,11 +82,19 @@ const dateModified = useDateFormat(
         <ul
           class="text-primary-100 flex flex-col flex-wrap gap-4 text-sm sm:flex-row sm:items-center"
         >
-          <li>
-            <p>Gepubliceerd op {{ datePublished }}</p>
+          <li v-if="article?.datePublished">
+            <p>
+              Gepubliceerd op
+              <time :datetime="article?.datePublished">{{
+                datePublished
+              }}</time>
+            </p>
           </li>
           <li>
-            <p>Laatst bijgewerkt op {{ dateModified }}</p>
+            <p>
+              Laatst bijgewerkt op
+              <time :datetime="article?.dateModified">{{ dateModified }}</time>
+            </p>
           </li>
         </ul>
       </template>

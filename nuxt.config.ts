@@ -26,12 +26,23 @@ export default defineNuxtConfig({
   ui: {
     colorMode: false,
   },
-  content: {
-    build: {
-      transformers: [
-        "~~/transformers/title-suffix",
-        "~~/transformers/date-meta",
-      ],
+  hooks: {
+    "content:file:afterParse": async (ctx) => {
+      const { file, content } = ctx;
+
+      const path = await import("path");
+      const { mtime, birthtime } = await import("fs/promises").then((fs) =>
+        fs.stat(path.join(file.path)),
+      );
+
+      content.dateCreated = birthtime;
+      content.dateModified = mtime;
+
+      if (!content.draft) {
+        content.datePublished = (content.datePublished as Date) ?? mtime;
+      } else {
+        content.datePublished = (content.datePublished as Date) ?? undefined;
+      }
     },
   },
   site: {

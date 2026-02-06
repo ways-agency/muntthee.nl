@@ -1,4 +1,4 @@
-import { defineCollection, defineContentConfig } from "@nuxt/content";
+import { defineCollection, defineContentConfig, property } from "@nuxt/content";
 import { z } from "zod";
 
 const Image = z.object({
@@ -144,6 +144,9 @@ export default defineContentConfig({
           src: z.string(),
           alt: z.string().optional(),
         }),
+        dateCreated: property(z.date()).editor({ hidden: true }),
+        dateModified: property(z.date()).editor({ hidden: true }),
+        datePublished: property(z.date()).editor({ hidden: true }),
       }),
     }),
     categories: defineCollection({

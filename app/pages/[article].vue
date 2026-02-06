@@ -42,6 +42,18 @@ const { data: author } = await useAsyncData(`${route.path}-author`, () =>
 
 <template>
   <article>
+    dateCreated: {{ article?.dateCreated }}
+    <br />
+    dateModified: {{ article?.dateModified }}
+    <br />
+    datePublished: {{ article?.datePublished }}
+    <br />
+
+    meta:
+    <pre>
+      {{ article?.meta }}
+    </pre>
+
     <pre>
       {{ article }}
     </pre>

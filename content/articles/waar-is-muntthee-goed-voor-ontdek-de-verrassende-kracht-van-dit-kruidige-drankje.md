@@ -1,11 +1,12 @@
 ---
-title: "Waar is muntthee goed voor? Ontdek de verrassende kracht van dit kruidige drankje"
-articleType: "General Explainer"
+title: Waar is muntthee goed voor? Ontdek de verrassende kracht van dit kruidige drankje
+articleType: General Explainer
 category: Gezondheid
-description: "Duik in de wereld van muntthee en leer waarom dit verfrissende drankje niet alleen lekker is, maar ook tal van voordelen biedt voor uw welzijn. Van spijsvertering tot ontspanning, ontdek de geheimen van munt."
+description: Duik in de wereld van muntthee en leer waarom dit verfrissende drankje niet alleen lekker is, maar ook tal van voordelen biedt voor uw welzijn. Van spijsvertering tot ontspanning, ontdek de geheimen van munt.
+draft: false
 seo:
   title: "Muntthee: Waar is het goed voor? Voordelen & tips"
-  description: "Ontdek de gezondheidsvoordelen van muntthee voor lichaam en geest. Leer hoe u de perfecte kop zet en geniet van de verkwikkende werking."
+  description: Ontdek de gezondheidsvoordelen van muntthee voor lichaam en geest. Leer hoe u de perfecte kop zet en geniet van de verkwikkende werking.
 ---
 
 Muntthee, een drankje met een rijke historie en een onmiskenbaar verfrissende smaak, is veel meer dan alleen een dorstlesser. Van de warme souks van Marokko tot de rust van je eigen keuken, dit aromatische brouwsel wordt wereldwijd gewaardeerd. Maar waar is muntthee goed voor, vraag je je misschien af? Het antwoord is veelzijdig: muntthee staat bekend om zijn vermogen om de spijsvertering te bevorderen, verlichting te bieden bij stress, en de adem te verfrissen, allemaal verpakt in een heerlijk geurige kop. Laten we samen de diepte induiken van dit geliefde drankje.
@@ -19,7 +20,8 @@ Traditionele bereidingen, zoals de iconische Marokkaanse muntthee, zijn een ritu
 ### Praktische toepassing
 
 Om zelf de beste kwaliteit verse munt in huis te halen en te experimenteren met je eigen traditionele of moderne muntthee creaties, kun je overwegen een verse muntplant aan te schaffen.
-:bol-card{query="verse muntplant" ean="7438226524520"}
+
+:bol-card{ean="7438226524520" query="verse muntplant"}
 
 ## De verrassende gezondheidsvoordelen van muntthee
 
@@ -50,7 +52,8 @@ Kortom, de vraag "waar is verse muntthee goed voor" beantwoordt zich met een lan
 ### Praktische toepassing
 
 Om optimaal te profiteren van de vele voordelen van muntthee, is het aan te raden om biologische munt kruiden te gebruiken. Dit zorgt ervoor dat je thee vrij is van pesticiden en andere ongewenste chemicaliën.
-:bol-card{query="biologische munt kruiden" ean="8717853491528"}
+
+:bol-card{ean="8717853491528" query="biologische munt kruiden"}
 
 ## Zo geniet u optimaal van uw kopje muntthee
 
@@ -67,4 +70,5 @@ En wist je dat muntthee ook fantastisch is als koud drankje? Laat de thee afkoel
 ### Praktische toepassing
 
 Om het meeste uit je muntthee-ervaring te halen, van de perfecte trektijd tot het stijlvol serveren, kan een goede thee accessoires set het verschil maken.
-:bol-card{query="thee accessoires set" ean="8720865108452"}
+
+:bol-card{ean="8720865108452" query="thee accessoires set"}

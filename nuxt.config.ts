@@ -18,6 +18,11 @@ export default defineNuxtConfig({
   ],
   css: ["~/assets/css/main.css"],
   ui: { colorMode: false },
+  content: {
+    build: {
+      transformers: ["~~/transformers/title-suffix"],
+    },
+  },
   hooks: {
     "content:file:afterParse": async (ctx) => {
       const { file, content } = ctx;
@@ -26,13 +31,6 @@ export default defineNuxtConfig({
       const { mtime, birthtime } = await import("fs/promises").then((fs) =>
         fs.stat(path.join(file.path)),
       );
-
-      console.log("path", file.path);
-      console.log("draft", content.draft);
-      console.log("dateCreated", content.dateCreated);
-      console.log("dateModified", content.dateModified);
-      console.log("datePublished", content.datePublished);
-      console.log("--------------------------------");
 
       content.dateCreated = content.dateCreated ?? birthtime;
       content.dateModified = mtime;

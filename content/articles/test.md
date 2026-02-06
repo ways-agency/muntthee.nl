@@ -1,6 +1,9 @@
 ---
 title: Test file
-draft: true
+description: Lorem ea sint aliquip qui ullamco id consequat laboris officia minim dolor deserunt velit. Officia in do deserunt. Cillum occaecat veniam qui nostrud id quis incididunt aute consequat. Ipsum id laborum anim aliquip proident aliquip proident ad aliqua eiusmod in culpa voluptate. Nulla eiusmod exercitation consectetur eiusmod mollit sint aute non veniam fugiat in nostrud elit reprehenderit. Nisi culpa labore incididunt culpa. Non sit ea veniam ex voluptate.
+draft: false
+readingTime: 4
+readingTimeTwo: 7
 ---
 
 # Test file
